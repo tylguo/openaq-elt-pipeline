@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: openaq_raw
+    database: openaq-elt-pipeline
+    schema: openaq_raw
+    tables:
+      - name: locations
+      - name: measurements_hours
