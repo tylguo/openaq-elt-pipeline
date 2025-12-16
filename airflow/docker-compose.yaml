@@ -1,7 +1,7 @@
 version: "3.8"
 
 x-airflow-common: &airflow-common
-  image: apache/airflow:2.9.3
+  build: .
   environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -11,6 +11,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
     GOOGLE_APPLICATION_CREDENTIALS: /opt/secrets/gcp-service-account.json
     OPENAQ_API_KEY: ${OPENAQ_API_KEY}
+    DBT_PROFILES_DIR: /opt/dbt_profiles
 
   volumes:
     - ./dags:/opt/airflow/dags
@@ -18,6 +19,8 @@ x-airflow-common: &airflow-common
     - ./plugins:/opt/airflow/plugins
     - ..:/opt/project
     - ../secrets:/opt/secrets:ro
+    - ../dbt_profiles:/opt/dbt_profiles:ro
+
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     - postgres

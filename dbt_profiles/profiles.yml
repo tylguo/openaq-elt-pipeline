@@ -1,0 +1,12 @@
+openaq_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: openaq-elt-pipeline
+      dataset: openaq_models
+      location: us-west2
+      keyfile: /opt/secrets/gcp-service-account.json
+      threads: 4
+      job_execution_timeout_seconds: 300
