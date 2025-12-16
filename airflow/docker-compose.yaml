@@ -13,7 +13,6 @@ x-airflow-common: &airflow-common
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    # Mount your repo so Airflow can call your ingestion scripts + dbt
     - ..:/opt/project
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
