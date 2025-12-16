@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_locations
+    description: "Staging view for OpenAQ locations."
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: country
+        tests:
+          - not_null
+      - name: latitude
+        tests:
+          - not_null
+      - name: longitude
+        tests:
+          - not_null
+
+  - name: stg_measurements_hours
+    description: "Staging view for OpenAQ hourly measurements by sensor."
+    columns:
+      - name: sensor_id
+        tests:
+          - not_null
+      - name: datetime_utc
+        tests:
+          - not_null
+      - name: value
+        tests:
+          - not_null
