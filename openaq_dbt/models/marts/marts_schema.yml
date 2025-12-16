@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_locations
+    description: "Location dimension table."
+    columns:
+      - name: location_id
+        tests:
+          - not_null
+          - unique
+      - name: location_name
+        tests:
+          - not_null
+      - name: country
+        tests:
+          - not_null
+
+  - name: fact_measurements_hourly
+    description: "Hourly measurements fact table joined to locations."
+    columns:
+      - name: datetime_utc
+        tests:
+          - not_null
+      - name: value
+        tests:
+          - not_null
+      - name: location_id
+        tests:
+          - not_null
