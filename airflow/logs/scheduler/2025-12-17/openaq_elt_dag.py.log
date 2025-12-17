@@ -383,3 +383,10 @@
 [2025-12-17T00:27:36.869+0000] {logging_mixin.py:188} INFO - [2025-12-17T00:27:36.869+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2025-12-17T00:27:36.882+0000] {logging_mixin.py:188} INFO - [2025-12-17T00:27:36.882+0000] {dag.py:3947} INFO - Setting next_dagrun for openaq_elt_pipeline to None, run_after=None
 [2025-12-17T00:27:36.894+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/openaq_elt_dag.py took 0.101 seconds
+[2025-12-17T00:28:07.382+0000] {processor.py:161} INFO - Started process (PID=1060) to work on /opt/airflow/dags/openaq_elt_dag.py
+[2025-12-17T00:28:07.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/openaq_elt_dag.py for tasks to queue
+[2025-12-17T00:28:07.386+0000] {logging_mixin.py:188} INFO - [2025-12-17T00:28:07.386+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/openaq_elt_dag.py
+[2025-12-17T00:28:07.405+0000] {processor.py:840} INFO - DAG(s) 'openaq_elt_pipeline' retrieved from /opt/airflow/dags/openaq_elt_dag.py
+[2025-12-17T00:28:07.445+0000] {logging_mixin.py:188} INFO - [2025-12-17T00:28:07.445+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2025-12-17T00:28:07.461+0000] {logging_mixin.py:188} INFO - [2025-12-17T00:28:07.461+0000] {dag.py:3947} INFO - Setting next_dagrun for openaq_elt_pipeline to None, run_after=None
+[2025-12-17T00:28:07.472+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/openaq_elt_dag.py took 0.104 seconds
