@@ -38,6 +38,7 @@ url = "https://api.openaq.org/v3/locations"
 limit = 100
 page = 1
 all_locations = []
+completed = True
 
 while True:
     params = {"limit": limit, "page": page}
@@ -46,6 +47,7 @@ while True:
 
     if response.status_code != 200:
         print(f"Error: {response.status_code} - {response.text}")
+        completed = False
         break
     
     data = response.json()
@@ -61,7 +63,7 @@ while True:
     sleep(1)
 
 # Insert data in BigQuery
-if all_locations:
+if all_locations and completed:
     job_config = bigquery.LoadJobConfig(
         write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE
     )
@@ -69,4 +71,4 @@ if all_locations:
     job.result()
     print(f"Loaded {len(all_locations)} locations into {table_ref}")
 else:
-    print("No locations fetched.")
+    print("Ingestion did not complete; skipping BigQuery load to avoid truncating table.")
