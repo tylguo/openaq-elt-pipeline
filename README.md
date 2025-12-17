@@ -27,3 +27,5 @@ This project implements an end-to-end ELT pipeline for global air quality data u
 3. The DAG will ingest raw data, run dbt transformations, and execute data quality tests.
 
 Transformed tables will be available in BigQuery, and the dashboard visuals can be recreated in Power BI using the analytics tables.
+
+![image](assets/OpenAQ_PowerBi_Report.png)
