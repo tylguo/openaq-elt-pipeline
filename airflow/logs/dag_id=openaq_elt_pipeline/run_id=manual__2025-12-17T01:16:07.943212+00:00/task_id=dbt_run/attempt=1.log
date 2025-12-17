@@ -1,0 +1,44 @@
+[2025-12-17T01:24:09.805+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T01:24:09.846+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openaq_elt_pipeline.dbt_run manual__2025-12-17T01:16:07.943212+00:00 [queued]>
+[2025-12-17T01:24:09.851+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openaq_elt_pipeline.dbt_run manual__2025-12-17T01:16:07.943212+00:00 [queued]>
+[2025-12-17T01:24:09.851+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-17T01:24:09.857+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dbt_run> on 2025-12-17 01:16:07.943212+00:00
+[2025-12-17T01:24:09.862+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=1777) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T01:24:09.861+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'openaq_elt_pipeline', 'dbt_run', 'manual__2025-12-17T01:16:07.943212+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/openaq_elt_dag.py', '--cfg-path', '/tmp/tmpj61696v0']
+[2025-12-17T01:24:09.862+0000] {standard_task_runner.py:91} INFO - Job 42: Subtask dbt_run
+[2025-12-17T01:24:09.862+0000] {standard_task_runner.py:64} INFO - Started process 1778 to run task
+[2025-12-17T01:24:09.893+0000] {task_command.py:426} INFO - Running <TaskInstance: openaq_elt_pipeline.dbt_run manual__2025-12-17T01:16:07.943212+00:00 [running]> on host de9a9770433a
+[2025-12-17T01:24:09.939+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='openaq_elt_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-12-17T01:16:07.943212+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-17T01:16:07.943212+00:00'
+[2025-12-17T01:24:09.939+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T01:24:09.947+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T01:24:09.948+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project/openaq_dbt &&\n        dbt run\n        ']
+[2025-12-17T01:24:09.953+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T01:24:11.135+0000] {subprocess.py:93} INFO - [0m01:24:11  Running with dbt=1.10.16
+[2025-12-17T01:24:11.915+0000] {subprocess.py:93} INFO - [0m01:24:11  Registered adapter: bigquery=1.8.3
+[2025-12-17T01:24:12.089+0000] {subprocess.py:93} INFO - [0m01:24:12  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2025-12-17T01:24:12.090+0000] {subprocess.py:93} INFO - There are 1 unused configuration paths:
+[2025-12-17T01:24:12.090+0000] {subprocess.py:93} INFO - - models.openaq_dbt.example
+[2025-12-17T01:24:12.168+0000] {subprocess.py:93} INFO - [0m01:24:12  Found 4 models, 15 data tests, 2 sources, 514 macros
+[2025-12-17T01:24:12.169+0000] {subprocess.py:93} INFO - [0m01:24:12
+[2025-12-17T01:24:12.169+0000] {subprocess.py:93} INFO - [0m01:24:12  Concurrency: 4 threads (target='dev')
+[2025-12-17T01:24:12.170+0000] {subprocess.py:93} INFO - [0m01:24:12
+[2025-12-17T01:24:13.443+0000] {subprocess.py:93} INFO - [0m01:24:13  1 of 4 START sql view model openaq_models.stg_locations ........................ [RUN]
+[2025-12-17T01:24:13.444+0000] {subprocess.py:93} INFO - [0m01:24:13  2 of 4 START sql view model openaq_models.stg_measurements_hours ............... [RUN]
+[2025-12-17T01:24:14.546+0000] {subprocess.py:93} INFO - [0m01:24:14  1 of 4 OK created sql view model openaq_models.stg_locations ................... [[32mCREATE VIEW (0 processed)[0m in 1.10s]
+[2025-12-17T01:24:14.546+0000] {subprocess.py:93} INFO - [0m01:24:14  2 of 4 OK created sql view model openaq_models.stg_measurements_hours .......... [[32mCREATE VIEW (0 processed)[0m in 1.10s]
+[2025-12-17T01:24:14.549+0000] {subprocess.py:93} INFO - [0m01:24:14  3 of 4 START sql table model openaq_models.dim_locations ....................... [RUN]
+[2025-12-17T01:24:17.774+0000] {subprocess.py:93} INFO - [0m01:24:17  3 of 4 OK created sql table model openaq_models.dim_locations .................. [[32mCREATE TABLE (22.6k rows, 2.5 MiB processed)[0m in 3.22s]
+[2025-12-17T01:24:17.782+0000] {subprocess.py:93} INFO - [0m01:24:17  4 of 4 START sql table model openaq_models.fact_measurements_hourly ............ [RUN]
+[2025-12-17T01:24:20.646+0000] {subprocess.py:93} INFO - [0m01:24:20  4 of 4 OK created sql table model openaq_models.fact_measurements_hourly ....... [[32mCREATE TABLE (40.0k rows, 3.1 MiB processed)[0m in 2.86s]
+[2025-12-17T01:24:20.657+0000] {subprocess.py:93} INFO - [0m01:24:20
+[2025-12-17T01:24:20.659+0000] {subprocess.py:93} INFO - [0m01:24:20  Finished running 2 table models, 2 view models in 0 hours 0 minutes and 8.49 seconds (8.49s).
+[2025-12-17T01:24:20.706+0000] {subprocess.py:93} INFO - [0m01:24:20
+[2025-12-17T01:24:20.707+0000] {subprocess.py:93} INFO - [0m01:24:20  [32mCompleted successfully[0m
+[2025-12-17T01:24:20.707+0000] {subprocess.py:93} INFO - [0m01:24:20
+[2025-12-17T01:24:20.708+0000] {subprocess.py:93} INFO - [0m01:24:20  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[2025-12-17T01:24:20.969+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T01:24:20.970+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T01:24:20.988+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=openaq_elt_pipeline, task_id=dbt_run, run_id=manual__2025-12-17T01:16:07.943212+00:00, execution_date=20251217T011607, start_date=20251217T012409, end_date=20251217T012420
+[2025-12-17T01:24:21.038+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-12-17T01:24:21.053+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T01:24:21.054+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
