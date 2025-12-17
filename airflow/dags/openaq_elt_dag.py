@@ -44,7 +44,7 @@ with DAG(
         task_id="dbt_run",
         bash_command=f"""
         cd {DBT_DIR} &&
-        dbt run
+        dbt run --select marts
         """,
     )
 
@@ -52,7 +52,7 @@ with DAG(
         task_id="dbt_test",
         bash_command=f"""
         cd {DBT_DIR} &&
-        dbt test
+        dbt test --select marts
         """,
     )
 

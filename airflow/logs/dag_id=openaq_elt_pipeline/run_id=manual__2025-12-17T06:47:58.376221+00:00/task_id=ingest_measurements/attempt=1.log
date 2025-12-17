@@ -1,0 +1,62 @@
+[2025-12-17T06:54:03.213+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T06:54:03.230+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-17T06:47:58.376221+00:00 [queued]>
+[2025-12-17T06:54:03.234+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-17T06:47:58.376221+00:00 [queued]>
+[2025-12-17T06:54:03.234+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-17T06:54:03.239+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): ingest_measurements> on 2025-12-17 06:47:58.376221+00:00
+[2025-12-17T06:54:03.243+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=241) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T06:54:03.243+0000] {standard_task_runner.py:64} INFO - Started process 242 to run task
+[2025-12-17T06:54:03.243+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'openaq_elt_pipeline', 'ingest_measurements', 'manual__2025-12-17T06:47:58.376221+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/openaq_elt_dag.py', '--cfg-path', '/tmp/tmpgmxe2z2m']
+[2025-12-17T06:54:03.244+0000] {standard_task_runner.py:91} INFO - Job 47: Subtask ingest_measurements
+[2025-12-17T06:54:03.266+0000] {task_command.py:426} INFO - Running <TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-17T06:47:58.376221+00:00 [running]> on host 74e745ccd0e5
+[2025-12-17T06:54:03.306+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='openaq_elt_pipeline' AIRFLOW_CTX_TASK_ID='ingest_measurements' AIRFLOW_CTX_EXECUTION_DATE='2025-12-17T06:47:58.376221+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-17T06:47:58.376221+00:00'
+[2025-12-17T06:54:03.307+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T06:54:03.313+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T06:54:03.314+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project/ingest &&\n        python ingest_measurements.py\n        ']
+[2025-12-17T06:54:03.319+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T06:54:54.374+0000] {subprocess.py:93} INFO - Fetching hourly measurements from 2025-12-10T06:54:04Z to 2025-12-17T06:54:04Z ...
+[2025-12-17T06:54:54.379+0000] {subprocess.py:93} INFO - Fetched locations page 1 with 100 locations.
+[2025-12-17T06:54:54.379+0000] {subprocess.py:93} INFO - Fetched locations page 2 with 100 locations.
+[2025-12-17T06:54:54.380+0000] {subprocess.py:93} INFO - Reached MAX_SENSORS=500, stopping sensor discovery.
+[2025-12-17T06:54:54.381+0000] {subprocess.py:93} INFO - Total sensors discovered (capped): 632
+[2025-12-17T06:54:54.382+0000] {subprocess.py:93} INFO - Processing sensor 1/632 (sensor_id=6)
+[2025-12-17T06:54:54.383+0000] {subprocess.py:93} INFO - Processing sensor 2/632 (sensor_id=5)
+[2025-12-17T06:54:54.383+0000] {subprocess.py:93} INFO - Processing sensor 3/632 (sensor_id=7)
+[2025-12-17T06:54:54.384+0000] {subprocess.py:93} INFO - Processing sensor 4/632 (sensor_id=8)
+[2025-12-17T06:54:54.384+0000] {subprocess.py:93} INFO - Processing sensor 5/632 (sensor_id=10)
+[2025-12-17T06:54:54.384+0000] {subprocess.py:93} INFO - Processing sensor 6/632 (sensor_id=9)
+[2025-12-17T06:54:54.385+0000] {subprocess.py:93} INFO - Processing sensor 7/632 (sensor_id=11)
+[2025-12-17T06:54:54.385+0000] {subprocess.py:93} INFO - Processing sensor 8/632 (sensor_id=12)
+[2025-12-17T06:54:54.385+0000] {subprocess.py:93} INFO - Processing sensor 9/632 (sensor_id=14)
+[2025-12-17T06:54:54.386+0000] {subprocess.py:93} INFO - Processing sensor 10/632 (sensor_id=13)
+[2025-12-17T06:54:54.386+0000] {subprocess.py:93} INFO - Processing sensor 11/632 (sensor_id=16)
+[2025-12-17T06:54:54.386+0000] {subprocess.py:93} INFO - Processing sensor 12/632 (sensor_id=15)
+[2025-12-17T06:54:54.387+0000] {subprocess.py:93} INFO - Processing sensor 13/632 (sensor_id=17)
+[2025-12-17T06:54:54.387+0000] {subprocess.py:93} INFO - Processing sensor 14/632 (sensor_id=18)
+[2025-12-17T06:54:54.387+0000] {subprocess.py:93} INFO - Processing sensor 15/632 (sensor_id=20)
+[2025-12-17T06:54:54.387+0000] {subprocess.py:93} INFO - Processing sensor 16/632 (sensor_id=19)
+[2025-12-17T06:54:54.387+0000] {subprocess.py:93} INFO - Processing sensor 17/632 (sensor_id=22)
+[2025-12-17T06:54:54.388+0000] {subprocess.py:93} INFO - Processing sensor 18/632 (sensor_id=21)
+[2025-12-17T06:54:54.388+0000] {subprocess.py:93} INFO - Processing sensor 19/632 (sensor_id=23)
+[2025-12-17T06:54:54.388+0000] {subprocess.py:93} INFO - Processing sensor 20/632 (sensor_id=13866)
+[2025-12-17T06:54:54.388+0000] {subprocess.py:93} INFO - Processing sensor 21/632 (sensor_id=24)
+[2025-12-17T06:54:54.389+0000] {subprocess.py:93} INFO - Processing sensor 22/632 (sensor_id=13864)
+[2025-12-17T06:54:54.389+0000] {subprocess.py:93} INFO - Processing sensor 23/632 (sensor_id=25)
+[2025-12-17T06:54:54.389+0000] {subprocess.py:93} INFO - Processing sensor 24/632 (sensor_id=27)
+[2025-12-17T06:54:54.389+0000] {subprocess.py:93} INFO - Processing sensor 25/632 (sensor_id=28)
+[2025-12-17T06:54:54.389+0000] {subprocess.py:93} INFO - Processing sensor 26/632 (sensor_id=29)
+[2025-12-17T06:54:54.390+0000] {subprocess.py:93} INFO - Processing sensor 27/632 (sensor_id=26)
+[2025-12-17T06:54:54.390+0000] {subprocess.py:93} INFO - Processing sensor 28/632 (sensor_id=30)
+[2025-12-17T06:54:54.390+0000] {subprocess.py:93} INFO - Processing sensor 29/632 (sensor_id=33)
+[2025-12-17T06:54:54.390+0000] {subprocess.py:93} INFO - Processing sensor 30/632 (sensor_id=32)
+[2025-12-17T06:54:54.390+0000] {subprocess.py:93} INFO - Rate limited for sensor 32, attempt 1/3. Sleeping 5s...
+[2025-12-17T06:54:54.391+0000] {subprocess.py:93} INFO - Rate limited for sensor 32, attempt 2/3. Sleeping 10s...
+[2025-12-17T06:54:54.391+0000] {subprocess.py:93} INFO - Rate limited for sensor 32, attempt 3/3. Sleeping 15s...
+[2025-12-17T06:54:54.391+0000] {subprocess.py:93} INFO - Failed to fetch data for sensor 32; marking run incomplete.
+[2025-12-17T06:54:54.391+0000] {subprocess.py:93} INFO - Total hourly measurement rows collected: 0
+[2025-12-17T06:54:54.391+0000] {subprocess.py:93} INFO - No measurement rows collected; skipping BigQuery load.
+[2025-12-17T06:54:54.506+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T06:54:54.508+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T06:54:54.532+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=openaq_elt_pipeline, task_id=ingest_measurements, run_id=manual__2025-12-17T06:47:58.376221+00:00, execution_date=20251217T064758, start_date=20251217T065403, end_date=20251217T065454
+[2025-12-17T06:54:54.545+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-12-17T06:54:54.564+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T06:54:54.565+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
