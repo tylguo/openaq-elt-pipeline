@@ -38,7 +38,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = gcp_key_path
 # ------------------------------
 client = bigquery.Client()
 dataset_id = "openaq_raw"
-table_id = "measurements_hours"
+table_id = "measurements_hours_p"
 table_ref = f"{client.project}.{dataset_id}.{table_id}"
 
 
@@ -170,11 +170,11 @@ def fetch_hours_for_sensor(sensor_ctx: dict, dt_from: str, dt_to: str):
                 sleep(wait_secs)
             else:
                 print(f"Error fetching hours for sensor {sensor_id} page {page}: {resp.status_code} - {resp.text}")
-                return []  # give up on this sensor
+                return None  # give up on this sensor
 
         if resp.status_code != 200:
             # after 3 attempts still not 200
-            return []
+            return None
 
         data = resp.json()
         results = data.get("results", [])
@@ -191,9 +191,16 @@ def fetch_hours_for_sensor(sensor_ctx: dict, dt_from: str, dt_to: str):
     return all_rows
 
 
-def load_measurements_to_bigquery(rows: list):
+def load_measurements_to_bigquery(rows: list, completed: bool):
     if not rows:
-        print("No measurement rows to load into BigQuery.")
+        print("No measurement rows collected; skipping BigQuery load.")
+        return
+
+    if not completed:
+        print(
+            f"Measurement ingestion did not complete (collected {len(rows)} rows); "
+            "continuing with APPEND load (safe) to keep incremental progress."
+        )
         return
 
     schema = [
@@ -211,7 +218,7 @@ def load_measurements_to_bigquery(rows: list):
 
     job_config = bigquery.LoadJobConfig(
         schema=schema,
-        write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,
+        write_disposition=bigquery.WriteDisposition.WRITE_APPEND,
     )
 
     print(f"Loading {len(rows)} rows into {table_ref} ...")
@@ -242,11 +249,18 @@ if __name__ == "__main__":
         exit(0)
 
     all_measurements = []
+    completed = True
 
     for idx, sensor_ctx in enumerate(sensors, start=1):
         print(f"Processing sensor {idx}/{len(sensors)} (sensor_id={sensor_ctx['sensor_id']})")
         sensor_rows = fetch_hours_for_sensor(sensor_ctx, dt_from_str, dt_to_str)
+
+        if sensor_rows is None:
+            completed = False
+            print(f"Failed to fetch data for sensor {sensor_ctx['sensor_id']}; marking run incomplete.")
+            break
+
         all_measurements.extend(sensor_rows)
 
     print(f"Total hourly measurement rows collected: {len(all_measurements)}")
-    load_measurements_to_bigquery(all_measurements)
+    load_measurements_to_bigquery(all_measurements, completed)
