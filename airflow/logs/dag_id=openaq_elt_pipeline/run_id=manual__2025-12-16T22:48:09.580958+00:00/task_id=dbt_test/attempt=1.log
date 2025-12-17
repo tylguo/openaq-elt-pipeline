@@ -1,0 +1,91 @@
+[2025-12-16T22:53:02.820+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-16T22:53:02.838+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openaq_elt_pipeline.dbt_test manual__2025-12-16T22:48:09.580958+00:00 [queued]>
+[2025-12-16T22:53:02.842+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openaq_elt_pipeline.dbt_test manual__2025-12-16T22:48:09.580958+00:00 [queued]>
+[2025-12-16T22:53:02.842+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-16T22:53:02.847+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dbt_test> on 2025-12-16 22:48:09.580958+00:00
+[2025-12-16T22:53:02.851+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=325) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-16T22:53:02.852+0000] {standard_task_runner.py:64} INFO - Started process 326 to run task
+[2025-12-16T22:53:02.851+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'openaq_elt_pipeline', 'dbt_test', 'manual__2025-12-16T22:48:09.580958+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/openaq_elt_dag.py', '--cfg-path', '/tmp/tmphro6zsh_']
+[2025-12-16T22:53:02.852+0000] {standard_task_runner.py:91} INFO - Job 24: Subtask dbt_test
+[2025-12-16T22:53:02.876+0000] {task_command.py:426} INFO - Running <TaskInstance: openaq_elt_pipeline.dbt_test manual__2025-12-16T22:48:09.580958+00:00 [running]> on host 2412a916846f
+[2025-12-16T22:53:02.915+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='openaq_elt_pipeline' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T22:48:09.580958+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-16T22:48:09.580958+00:00'
+[2025-12-16T22:53:02.916+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-16T22:53:02.923+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-16T22:53:02.923+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project/openaq_dbt &&\n        dbt test\n        ']
+[2025-12-16T22:53:02.927+0000] {subprocess.py:86} INFO - Output:
+[2025-12-16T22:53:04.433+0000] {subprocess.py:93} INFO - [0m22:53:04  Running with dbt=1.10.16
+[2025-12-16T22:53:05.276+0000] {subprocess.py:93} INFO - [0m22:53:05  Registered adapter: bigquery=1.8.3
+[2025-12-16T22:53:05.680+0000] {subprocess.py:93} INFO - [0m22:53:05  Found 6 models, 19 data tests, 2 sources, 514 macros
+[2025-12-16T22:53:05.684+0000] {subprocess.py:93} INFO - [0m22:53:05
+[2025-12-16T22:53:05.685+0000] {subprocess.py:93} INFO - [0m22:53:05  Concurrency: 4 threads (target='dev')
+[2025-12-16T22:53:05.685+0000] {subprocess.py:93} INFO - [0m22:53:05
+[2025-12-16T22:53:06.096+0000] {subprocess.py:93} INFO - [0m22:53:06  1 of 19 START test not_null_dim_locations_country .............................. [RUN]
+[2025-12-16T22:53:06.096+0000] {subprocess.py:93} INFO - [0m22:53:06  2 of 19 START test not_null_dim_locations_location_id .......................... [RUN]
+[2025-12-16T22:53:06.096+0000] {subprocess.py:93} INFO - [0m22:53:06  3 of 19 START test not_null_dim_locations_location_name ........................ [RUN]
+[2025-12-16T22:53:06.097+0000] {subprocess.py:93} INFO - [0m22:53:06  4 of 19 START test not_null_fact_measurements_hourly_datetime_utc .............. [RUN]
+[2025-12-16T22:53:06.931+0000] {subprocess.py:93} INFO - [0m22:53:06  2 of 19 PASS not_null_dim_locations_location_id ................................ [[32mPASS[0m in 0.83s]
+[2025-12-16T22:53:06.934+0000] {subprocess.py:93} INFO - [0m22:53:06  5 of 19 START test not_null_fact_measurements_hourly_location_id ............... [RUN]
+[2025-12-16T22:53:06.938+0000] {subprocess.py:93} INFO - [0m22:53:06  1 of 19 PASS not_null_dim_locations_country .................................... [[32mPASS[0m in 0.84s]
+[2025-12-16T22:53:06.942+0000] {subprocess.py:93} INFO - [0m22:53:06  6 of 19 START test not_null_fact_measurements_hourly_value ..................... [RUN]
+[2025-12-16T22:53:06.960+0000] {subprocess.py:93} INFO - [0m22:53:06  4 of 19 PASS not_null_fact_measurements_hourly_datetime_utc .................... [[32mPASS[0m in 0.86s]
+[2025-12-16T22:53:06.963+0000] {subprocess.py:93} INFO - [0m22:53:06  7 of 19 START test not_null_my_first_dbt_model_id .............................. [RUN]
+[2025-12-16T22:53:06.965+0000] {subprocess.py:93} INFO - [0m22:53:06  3 of 19 PASS not_null_dim_locations_location_name .............................. [[32mPASS[0m in 0.87s]
+[2025-12-16T22:53:06.974+0000] {subprocess.py:93} INFO - [0m22:53:06  8 of 19 START test not_null_my_second_dbt_model_id ............................. [RUN]
+[2025-12-16T22:53:07.751+0000] {subprocess.py:93} INFO - [0m22:53:07  5 of 19 PASS not_null_fact_measurements_hourly_location_id ..................... [[32mPASS[0m in 0.82s]
+[2025-12-16T22:53:07.754+0000] {subprocess.py:93} INFO - [0m22:53:07  6 of 19 PASS not_null_fact_measurements_hourly_value ........................... [[32mPASS[0m in 0.81s]
+[2025-12-16T22:53:07.755+0000] {subprocess.py:93} INFO - [0m22:53:07  9 of 19 START test not_null_stg_locations_country .............................. [RUN]
+[2025-12-16T22:53:07.756+0000] {subprocess.py:93} INFO - [0m22:53:07  10 of 19 START test not_null_stg_locations_id .................................. [RUN]
+[2025-12-16T22:53:07.859+0000] {subprocess.py:93} INFO - [0m22:53:07  7 of 19 FAIL 1 not_null_my_first_dbt_model_id .................................. [[31mFAIL 1[0m in 0.89s]
+[2025-12-16T22:53:07.860+0000] {subprocess.py:93} INFO - [0m22:53:07  11 of 19 START test not_null_stg_locations_latitude ............................ [RUN]
+[2025-12-16T22:53:07.997+0000] {subprocess.py:93} INFO - [0m22:53:07  8 of 19 PASS not_null_my_second_dbt_model_id ................................... [[32mPASS[0m in 1.02s]
+[2025-12-16T22:53:07.998+0000] {subprocess.py:93} INFO - [0m22:53:07  12 of 19 START test not_null_stg_locations_longitude ........................... [RUN]
+[2025-12-16T22:53:08.547+0000] {subprocess.py:93} INFO - [0m22:53:08  9 of 19 PASS not_null_stg_locations_country .................................... [[32mPASS[0m in 0.79s]
+[2025-12-16T22:53:08.551+0000] {subprocess.py:93} INFO - [0m22:53:08  13 of 19 START test not_null_stg_measurements_hours_datetime_utc ............... [RUN]
+[2025-12-16T22:53:08.623+0000] {subprocess.py:93} INFO - [0m22:53:08  10 of 19 PASS not_null_stg_locations_id ........................................ [[32mPASS[0m in 0.87s]
+[2025-12-16T22:53:08.624+0000] {subprocess.py:93} INFO - [0m22:53:08  14 of 19 START test not_null_stg_measurements_hours_sensor_id .................. [RUN]
+[2025-12-16T22:53:08.775+0000] {subprocess.py:93} INFO - [0m22:53:08  11 of 19 PASS not_null_stg_locations_latitude .................................. [[32mPASS[0m in 0.91s]
+[2025-12-16T22:53:08.776+0000] {subprocess.py:93} INFO - [0m22:53:08  15 of 19 START test not_null_stg_measurements_hours_value ...................... [RUN]
+[2025-12-16T22:53:08.877+0000] {subprocess.py:93} INFO - [0m22:53:08  12 of 19 PASS not_null_stg_locations_longitude ................................. [[32mPASS[0m in 0.88s]
+[2025-12-16T22:53:08.878+0000] {subprocess.py:93} INFO - [0m22:53:08  16 of 19 START test unique_dim_locations_location_id ........................... [RUN]
+[2025-12-16T22:53:09.405+0000] {subprocess.py:93} INFO - [0m22:53:09  13 of 19 PASS not_null_stg_measurements_hours_datetime_utc ..................... [[32mPASS[0m in 0.85s]
+[2025-12-16T22:53:09.407+0000] {subprocess.py:93} INFO - [0m22:53:09  17 of 19 START test unique_my_first_dbt_model_id ............................... [RUN]
+[2025-12-16T22:53:09.532+0000] {subprocess.py:93} INFO - [0m22:53:09  14 of 19 PASS not_null_stg_measurements_hours_sensor_id ........................ [[32mPASS[0m in 0.91s]
+[2025-12-16T22:53:09.535+0000] {subprocess.py:93} INFO - [0m22:53:09  18 of 19 START test unique_my_second_dbt_model_id .............................. [RUN]
+[2025-12-16T22:53:09.588+0000] {subprocess.py:93} INFO - [0m22:53:09  15 of 19 PASS not_null_stg_measurements_hours_value ............................ [[32mPASS[0m in 0.81s]
+[2025-12-16T22:53:09.590+0000] {subprocess.py:93} INFO - [0m22:53:09  19 of 19 START test unique_stg_locations_id .................................... [RUN]
+[2025-12-16T22:53:09.723+0000] {subprocess.py:93} INFO - [0m22:53:09  16 of 19 PASS unique_dim_locations_location_id ................................. [[32mPASS[0m in 0.84s]
+[2025-12-16T22:53:10.202+0000] {subprocess.py:93} INFO - [0m22:53:10  17 of 19 PASS unique_my_first_dbt_model_id ..................................... [[32mPASS[0m in 0.79s]
+[2025-12-16T22:53:10.387+0000] {subprocess.py:93} INFO - [0m22:53:10  18 of 19 PASS unique_my_second_dbt_model_id .................................... [[32mPASS[0m in 0.85s]
+[2025-12-16T22:53:10.530+0000] {subprocess.py:93} INFO - [0m22:53:10  19 of 19 PASS unique_stg_locations_id .......................................... [[32mPASS[0m in 0.94s]
+[2025-12-16T22:53:10.533+0000] {subprocess.py:93} INFO - [0m22:53:10
+[2025-12-16T22:53:10.534+0000] {subprocess.py:93} INFO - [0m22:53:10  Finished running 19 data tests in 0 hours 0 minutes and 4.85 seconds (4.85s).
+[2025-12-16T22:53:10.578+0000] {subprocess.py:93} INFO - [0m22:53:10
+[2025-12-16T22:53:10.579+0000] {subprocess.py:93} INFO - [0m22:53:10  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[2025-12-16T22:53:10.579+0000] {subprocess.py:93} INFO - [0m22:53:10
+[2025-12-16T22:53:10.579+0000] {subprocess.py:93} INFO - [0m22:53:10  [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[2025-12-16T22:53:10.580+0000] {subprocess.py:93} INFO - [0m22:53:10    Got 1 result, configured to fail if != 0
+[2025-12-16T22:53:10.580+0000] {subprocess.py:93} INFO - [0m22:53:10
+[2025-12-16T22:53:10.581+0000] {subprocess.py:93} INFO - [0m22:53:10    compiled code at target/compiled/openaq_dbt/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[2025-12-16T22:53:10.581+0000] {subprocess.py:93} INFO - [0m22:53:10
+[2025-12-16T22:53:10.582+0000] {subprocess.py:93} INFO - [0m22:53:10  Done. PASS=18 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=19
+[2025-12-16T22:53:10.893+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-12-16T22:53:10.894+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-16T22:53:10.904+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-12-16T22:53:10.906+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=openaq_elt_pipeline, task_id=dbt_test, run_id=manual__2025-12-16T22:48:09.580958+00:00, execution_date=20251216T224809, start_date=20251216T225302, end_date=20251216T225310
+[2025-12-16T22:53:10.916+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 24 for task dbt_test (Bash command failed. The command returned a non-zero exit code 1.; 326)
+[2025-12-16T22:53:10.954+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-12-16T22:53:10.963+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-16T22:53:10.964+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

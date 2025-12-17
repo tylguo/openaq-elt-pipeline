@@ -1,0 +1,63 @@
+[2025-12-16T22:51:44.245+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-16T22:51:44.269+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_locations manual__2025-12-16T22:51:43.817098+00:00 [queued]>
+[2025-12-16T22:51:44.272+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_locations manual__2025-12-16T22:51:43.817098+00:00 [queued]>
+[2025-12-16T22:51:44.272+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-16T22:51:44.277+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): ingest_locations> on 2025-12-16 22:51:43.817098+00:00
+[2025-12-16T22:51:44.282+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=216) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-16T22:51:44.281+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'openaq_elt_pipeline', 'ingest_locations', 'manual__2025-12-16T22:51:43.817098+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/openaq_elt_dag.py', '--cfg-path', '/tmp/tmp4b5pbakm']
+[2025-12-16T22:51:44.282+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask ingest_locations
+[2025-12-16T22:51:44.282+0000] {standard_task_runner.py:64} INFO - Started process 217 to run task
+[2025-12-16T22:51:44.304+0000] {task_command.py:426} INFO - Running <TaskInstance: openaq_elt_pipeline.ingest_locations manual__2025-12-16T22:51:43.817098+00:00 [running]> on host 2412a916846f
+[2025-12-16T22:51:44.342+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='openaq_elt_pipeline' AIRFLOW_CTX_TASK_ID='ingest_locations' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T22:51:43.817098+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-16T22:51:43.817098+00:00'
+[2025-12-16T22:51:44.342+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-16T22:51:44.351+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-16T22:51:44.352+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project/ingest &&\n        python ingest_locations.py\n        ']
+[2025-12-16T22:51:44.356+0000] {subprocess.py:86} INFO - Output:
+[2025-12-16T22:52:47.765+0000] {subprocess.py:93} INFO - Fetched page 1, 100 locations
+[2025-12-16T22:52:47.770+0000] {subprocess.py:93} INFO - Fetched page 2, 100 locations
+[2025-12-16T22:52:47.771+0000] {subprocess.py:93} INFO - Fetched page 3, 100 locations
+[2025-12-16T22:52:47.772+0000] {subprocess.py:93} INFO - Fetched page 4, 100 locations
+[2025-12-16T22:52:47.772+0000] {subprocess.py:93} INFO - Fetched page 5, 100 locations
+[2025-12-16T22:52:47.774+0000] {subprocess.py:93} INFO - Fetched page 6, 100 locations
+[2025-12-16T22:52:47.775+0000] {subprocess.py:93} INFO - Fetched page 7, 100 locations
+[2025-12-16T22:52:47.775+0000] {subprocess.py:93} INFO - Fetched page 8, 100 locations
+[2025-12-16T22:52:47.775+0000] {subprocess.py:93} INFO - Fetched page 9, 100 locations
+[2025-12-16T22:52:47.775+0000] {subprocess.py:93} INFO - Fetched page 10, 100 locations
+[2025-12-16T22:52:47.775+0000] {subprocess.py:93} INFO - Fetched page 11, 100 locations
+[2025-12-16T22:52:47.775+0000] {subprocess.py:93} INFO - Fetched page 12, 100 locations
+[2025-12-16T22:52:47.776+0000] {subprocess.py:93} INFO - Fetched page 13, 100 locations
+[2025-12-16T22:52:47.776+0000] {subprocess.py:93} INFO - Fetched page 14, 100 locations
+[2025-12-16T22:52:47.776+0000] {subprocess.py:93} INFO - Fetched page 15, 100 locations
+[2025-12-16T22:52:47.776+0000] {subprocess.py:93} INFO - Fetched page 16, 100 locations
+[2025-12-16T22:52:47.776+0000] {subprocess.py:93} INFO - Fetched page 17, 100 locations
+[2025-12-16T22:52:47.776+0000] {subprocess.py:93} INFO - Fetched page 18, 100 locations
+[2025-12-16T22:52:47.776+0000] {subprocess.py:93} INFO - Fetched page 19, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 20, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 21, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 22, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 23, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 24, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 25, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 26, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 27, 100 locations
+[2025-12-16T22:52:47.777+0000] {subprocess.py:93} INFO - Fetched page 28, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 29, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 30, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 31, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 32, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 33, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 34, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 35, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 36, 100 locations
+[2025-12-16T22:52:47.778+0000] {subprocess.py:93} INFO - Fetched page 37, 100 locations
+[2025-12-16T22:52:47.779+0000] {subprocess.py:93} INFO - Fetched page 38, 100 locations
+[2025-12-16T22:52:47.779+0000] {subprocess.py:93} INFO - Fetched page 39, 100 locations
+[2025-12-16T22:52:47.779+0000] {subprocess.py:93} INFO - Fetched page 40, 100 locations
+[2025-12-16T22:52:47.779+0000] {subprocess.py:93} INFO - Error: 429 - {"detail":"Too many requests"}
+[2025-12-16T22:52:47.779+0000] {subprocess.py:93} INFO - Loaded 4000 locations into openaq-elt-pipeline.openaq_raw.locations
+[2025-12-16T22:52:47.848+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-16T22:52:47.850+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-16T22:52:47.873+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=openaq_elt_pipeline, task_id=ingest_locations, run_id=manual__2025-12-16T22:51:43.817098+00:00, execution_date=20251216T225143, start_date=20251216T225144, end_date=20251216T225247
+[2025-12-16T22:52:47.895+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-12-16T22:52:47.914+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-16T22:52:47.915+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

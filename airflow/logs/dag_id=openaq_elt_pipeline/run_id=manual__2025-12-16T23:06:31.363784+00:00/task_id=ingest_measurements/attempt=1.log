@@ -1,0 +1,1267 @@
+[2025-12-16T23:12:36.333+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-16T23:12:36.351+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-16T23:06:31.363784+00:00 [queued]>
+[2025-12-16T23:12:36.355+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-16T23:06:31.363784+00:00 [queued]>
+[2025-12-16T23:12:36.355+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-16T23:12:36.359+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): ingest_measurements> on 2025-12-16 23:06:31.363784+00:00
+[2025-12-16T23:12:36.363+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=241) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-16T23:12:36.363+0000] {standard_task_runner.py:64} INFO - Started process 242 to run task
+[2025-12-16T23:12:36.363+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'openaq_elt_pipeline', 'ingest_measurements', 'manual__2025-12-16T23:06:31.363784+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/openaq_elt_dag.py', '--cfg-path', '/tmp/tmpavphg0tp']
+[2025-12-16T23:12:36.364+0000] {standard_task_runner.py:91} INFO - Job 29: Subtask ingest_measurements
+[2025-12-16T23:12:36.389+0000] {task_command.py:426} INFO - Running <TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-16T23:06:31.363784+00:00 [running]> on host de9a9770433a
+[2025-12-16T23:12:36.429+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='openaq_elt_pipeline' AIRFLOW_CTX_TASK_ID='ingest_measurements' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T23:06:31.363784+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-16T23:06:31.363784+00:00'
+[2025-12-16T23:12:36.429+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-16T23:12:36.437+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-16T23:12:36.438+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project/ingest &&\n        python ingest_measurements.py\n        ']
+[2025-12-16T23:12:36.442+0000] {subprocess.py:86} INFO - Output:
+[2025-12-16T23:17:17.096+0000] {subprocess.py:93} INFO - Fetching hourly measurements from 2025-12-09T23:12:37Z to 2025-12-16T23:12:37Z ...
+[2025-12-16T23:17:17.104+0000] {subprocess.py:93} INFO - Fetched locations page 1 with 100 locations.
+[2025-12-16T23:17:17.104+0000] {subprocess.py:93} INFO - Fetched locations page 2 with 100 locations.
+[2025-12-16T23:17:17.104+0000] {subprocess.py:93} INFO - Reached MAX_SENSORS=500, stopping sensor discovery.
+[2025-12-16T23:17:17.104+0000] {subprocess.py:93} INFO - Total sensors discovered (capped): 632
+[2025-12-16T23:17:17.105+0000] {subprocess.py:93} INFO - Processing sensor 1/632 (sensor_id=6)
+[2025-12-16T23:17:17.120+0000] {subprocess.py:93} INFO - Processing sensor 2/632 (sensor_id=5)
+[2025-12-16T23:17:17.121+0000] {subprocess.py:93} INFO - Processing sensor 3/632 (sensor_id=7)
+[2025-12-16T23:17:17.121+0000] {subprocess.py:93} INFO - Processing sensor 4/632 (sensor_id=8)
+[2025-12-16T23:17:17.123+0000] {subprocess.py:93} INFO - Processing sensor 5/632 (sensor_id=10)
+[2025-12-16T23:17:17.125+0000] {subprocess.py:93} INFO - Processing sensor 6/632 (sensor_id=9)
+[2025-12-16T23:17:17.125+0000] {subprocess.py:93} INFO - Processing sensor 7/632 (sensor_id=11)
+[2025-12-16T23:17:17.132+0000] {subprocess.py:93} INFO - Processing sensor 8/632 (sensor_id=12)
+[2025-12-16T23:17:17.132+0000] {subprocess.py:93} INFO - Processing sensor 9/632 (sensor_id=14)
+[2025-12-16T23:17:17.137+0000] {subprocess.py:93} INFO - Processing sensor 10/632 (sensor_id=13)
+[2025-12-16T23:17:17.137+0000] {subprocess.py:93} INFO - Processing sensor 11/632 (sensor_id=16)
+[2025-12-16T23:17:17.153+0000] {subprocess.py:93} INFO - Processing sensor 12/632 (sensor_id=15)
+[2025-12-16T23:17:17.153+0000] {subprocess.py:93} INFO - Processing sensor 13/632 (sensor_id=17)
+[2025-12-16T23:17:17.156+0000] {subprocess.py:93} INFO - Processing sensor 14/632 (sensor_id=18)
+[2025-12-16T23:17:17.156+0000] {subprocess.py:93} INFO - Processing sensor 15/632 (sensor_id=20)
+[2025-12-16T23:17:17.156+0000] {subprocess.py:93} INFO - Processing sensor 16/632 (sensor_id=19)
+[2025-12-16T23:17:17.157+0000] {subprocess.py:93} INFO - Processing sensor 17/632 (sensor_id=22)
+[2025-12-16T23:17:17.157+0000] {subprocess.py:93} INFO - Processing sensor 18/632 (sensor_id=21)
+[2025-12-16T23:17:17.157+0000] {subprocess.py:93} INFO - Processing sensor 19/632 (sensor_id=23)
+[2025-12-16T23:17:17.159+0000] {subprocess.py:93} INFO - Processing sensor 20/632 (sensor_id=13866)
+[2025-12-16T23:17:17.159+0000] {subprocess.py:93} INFO - Rate limited for sensor 13866, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:17:17.162+0000] {subprocess.py:93} INFO - Rate limited for sensor 13866, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:17:17.162+0000] {subprocess.py:93} INFO - Processing sensor 21/632 (sensor_id=24)
+[2025-12-16T23:17:17.162+0000] {subprocess.py:93} INFO - Processing sensor 22/632 (sensor_id=13864)
+[2025-12-16T23:17:17.163+0000] {subprocess.py:93} INFO - Processing sensor 23/632 (sensor_id=25)
+[2025-12-16T23:17:17.163+0000] {subprocess.py:93} INFO - Processing sensor 24/632 (sensor_id=27)
+[2025-12-16T23:17:17.163+0000] {subprocess.py:93} INFO - Processing sensor 25/632 (sensor_id=28)
+[2025-12-16T23:17:17.170+0000] {subprocess.py:93} INFO - Processing sensor 26/632 (sensor_id=29)
+[2025-12-16T23:17:17.171+0000] {subprocess.py:93} INFO - Processing sensor 27/632 (sensor_id=26)
+[2025-12-16T23:17:17.171+0000] {subprocess.py:93} INFO - Processing sensor 28/632 (sensor_id=30)
+[2025-12-16T23:17:17.171+0000] {subprocess.py:93} INFO - Processing sensor 29/632 (sensor_id=33)
+[2025-12-16T23:17:17.171+0000] {subprocess.py:93} INFO - Processing sensor 30/632 (sensor_id=32)
+[2025-12-16T23:17:17.171+0000] {subprocess.py:93} INFO - Processing sensor 31/632 (sensor_id=31)
+[2025-12-16T23:17:17.171+0000] {subprocess.py:93} INFO - Processing sensor 32/632 (sensor_id=34)
+[2025-12-16T23:17:17.172+0000] {subprocess.py:93} INFO - Processing sensor 33/632 (sensor_id=392)
+[2025-12-16T23:17:17.172+0000] {subprocess.py:93} INFO - Processing sensor 34/632 (sensor_id=12234782)
+[2025-12-16T23:17:17.174+0000] {subprocess.py:93} INFO -   Sensor 12234782: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.174+0000] {subprocess.py:93} INFO -   Sensor 12234782: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.174+0000] {subprocess.py:93} INFO - Processing sensor 35/632 (sensor_id=12234783)
+[2025-12-16T23:17:17.174+0000] {subprocess.py:93} INFO -   Sensor 12234783: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.174+0000] {subprocess.py:93} INFO -   Sensor 12234783: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.175+0000] {subprocess.py:93} INFO - Processing sensor 36/632 (sensor_id=12234784)
+[2025-12-16T23:17:17.175+0000] {subprocess.py:93} INFO -   Sensor 12234784: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.180+0000] {subprocess.py:93} INFO -   Sensor 12234784: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.181+0000] {subprocess.py:93} INFO - Processing sensor 37/632 (sensor_id=36)
+[2025-12-16T23:17:17.181+0000] {subprocess.py:93} INFO - Processing sensor 38/632 (sensor_id=14340713)
+[2025-12-16T23:17:17.183+0000] {subprocess.py:93} INFO -   Sensor 14340713: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.183+0000] {subprocess.py:93} INFO -   Sensor 14340713: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.184+0000] {subprocess.py:93} INFO - Processing sensor 39/632 (sensor_id=12234785)
+[2025-12-16T23:17:17.188+0000] {subprocess.py:93} INFO -   Sensor 12234785: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.189+0000] {subprocess.py:93} INFO -   Sensor 12234785: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.189+0000] {subprocess.py:93} INFO - Processing sensor 40/632 (sensor_id=394)
+[2025-12-16T23:17:17.189+0000] {subprocess.py:93} INFO - Rate limited for sensor 394, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:17:17.189+0000] {subprocess.py:93} INFO - Rate limited for sensor 394, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:17:17.190+0000] {subprocess.py:93} INFO - Rate limited for sensor 394, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:17:17.195+0000] {subprocess.py:93} INFO - Processing sensor 41/632 (sensor_id=399)
+[2025-12-16T23:17:17.195+0000] {subprocess.py:93} INFO - Processing sensor 42/632 (sensor_id=12234786)
+[2025-12-16T23:17:17.195+0000] {subprocess.py:93} INFO -   Sensor 12234786: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.195+0000] {subprocess.py:93} INFO -   Sensor 12234786: fetched page 2 with 62 hourly records.
+[2025-12-16T23:17:17.196+0000] {subprocess.py:93} INFO - Processing sensor 43/632 (sensor_id=12234787)
+[2025-12-16T23:17:17.196+0000] {subprocess.py:93} INFO -   Sensor 12234787: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.197+0000] {subprocess.py:93} INFO -   Sensor 12234787: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.197+0000] {subprocess.py:93} INFO - Processing sensor 44/632 (sensor_id=35)
+[2025-12-16T23:17:17.197+0000] {subprocess.py:93} INFO - Processing sensor 45/632 (sensor_id=12234788)
+[2025-12-16T23:17:17.197+0000] {subprocess.py:93} INFO -   Sensor 12234788: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.198+0000] {subprocess.py:93} INFO -   Sensor 12234788: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.198+0000] {subprocess.py:93} INFO - Processing sensor 46/632 (sensor_id=393)
+[2025-12-16T23:17:17.198+0000] {subprocess.py:93} INFO - Processing sensor 47/632 (sensor_id=12234789)
+[2025-12-16T23:17:17.203+0000] {subprocess.py:93} INFO -   Sensor 12234789: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.203+0000] {subprocess.py:93} INFO -   Sensor 12234789: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.203+0000] {subprocess.py:93} INFO - Processing sensor 48/632 (sensor_id=12234790)
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO -   Sensor 12234790: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO -   Sensor 12234790: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO - Processing sensor 49/632 (sensor_id=14340714)
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO -   Sensor 14340714: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO -   Sensor 14340714: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO - Processing sensor 50/632 (sensor_id=14340715)
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO -   Sensor 14340715: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO -   Sensor 14340715: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.208+0000] {subprocess.py:93} INFO - Processing sensor 51/632 (sensor_id=37)
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Processing sensor 52/632 (sensor_id=5136)
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Processing sensor 53/632 (sensor_id=5137)
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Processing sensor 54/632 (sensor_id=38)
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Processing sensor 55/632 (sensor_id=5138)
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Processing sensor 56/632 (sensor_id=5139)
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Processing sensor 57/632 (sensor_id=5140)
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Rate limited for sensor 5140, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Rate limited for sensor 5140, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Rate limited for sensor 5140, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:17:17.209+0000] {subprocess.py:93} INFO - Processing sensor 58/632 (sensor_id=40)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 59/632 (sensor_id=41)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 60/632 (sensor_id=68)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 61/632 (sensor_id=5177)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 62/632 (sensor_id=5178)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 63/632 (sensor_id=5183)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 64/632 (sensor_id=42)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 65/632 (sensor_id=5186)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 66/632 (sensor_id=43)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 67/632 (sensor_id=1045)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 68/632 (sensor_id=1046)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 69/632 (sensor_id=114)
+[2025-12-16T23:17:17.210+0000] {subprocess.py:93} INFO - Processing sensor 70/632 (sensor_id=1047)
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO -   Sensor 1047: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO -   Sensor 1047: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO - Processing sensor 71/632 (sensor_id=1044)
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO -   Sensor 1044: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO -   Sensor 1044: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO - Processing sensor 72/632 (sensor_id=44)
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO - Processing sensor 73/632 (sensor_id=45)
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO -   Sensor 45: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.211+0000] {subprocess.py:93} INFO -   Sensor 45: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.212+0000] {subprocess.py:93} INFO - Processing sensor 74/632 (sensor_id=35374)
+[2025-12-16T23:17:17.212+0000] {subprocess.py:93} INFO -   Sensor 35374: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.212+0000] {subprocess.py:93} INFO -   Sensor 35374: fetched page 2 with 64 hourly records.
+[2025-12-16T23:17:17.212+0000] {subprocess.py:93} INFO - Processing sensor 75/632 (sensor_id=601)
+[2025-12-16T23:17:17.212+0000] {subprocess.py:93} INFO -   Sensor 601: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.212+0000] {subprocess.py:93} INFO -   Sensor 601: fetched page 2 with 60 hourly records.
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Processing sensor 76/632 (sensor_id=1410)
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Processing sensor 77/632 (sensor_id=124)
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Processing sensor 78/632 (sensor_id=46)
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Rate limited for sensor 46, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Rate limited for sensor 46, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Rate limited for sensor 46, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Processing sensor 79/632 (sensor_id=28735)
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO -   Sensor 28735: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO -   Sensor 28735: fetched page 2 with 3 hourly records.
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO - Processing sensor 80/632 (sensor_id=35661)
+[2025-12-16T23:17:17.213+0000] {subprocess.py:93} INFO -   Sensor 35661: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.215+0000] {subprocess.py:93} INFO -   Sensor 35661: fetched page 2 with 3 hourly records.
+[2025-12-16T23:17:17.215+0000] {subprocess.py:93} INFO - Processing sensor 81/632 (sensor_id=1412)
+[2025-12-16T23:17:17.215+0000] {subprocess.py:93} INFO -   Sensor 1412: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.216+0000] {subprocess.py:93} INFO -   Sensor 1412: fetched page 2 with 19 hourly records.
+[2025-12-16T23:17:17.216+0000] {subprocess.py:93} INFO - Processing sensor 82/632 (sensor_id=5009)
+[2025-12-16T23:17:17.216+0000] {subprocess.py:93} INFO - Processing sensor 83/632 (sensor_id=5006)
+[2025-12-16T23:17:17.216+0000] {subprocess.py:93} INFO - Processing sensor 84/632 (sensor_id=5003)
+[2025-12-16T23:17:17.216+0000] {subprocess.py:93} INFO - Processing sensor 85/632 (sensor_id=47)
+[2025-12-16T23:17:17.216+0000] {subprocess.py:93} INFO - Processing sensor 86/632 (sensor_id=5001)
+[2025-12-16T23:17:17.216+0000] {subprocess.py:93} INFO - Processing sensor 87/632 (sensor_id=5373)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO - Processing sensor 88/632 (sensor_id=5368)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO - Processing sensor 89/632 (sensor_id=5360)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO - Processing sensor 90/632 (sensor_id=49)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO - Processing sensor 91/632 (sensor_id=5342)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO - Processing sensor 92/632 (sensor_id=4275693)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO -   Sensor 4275693: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO -   Sensor 4275693: fetched page 2 with 67 hourly records.
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO - Processing sensor 93/632 (sensor_id=4642)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO -   Sensor 4642: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO -   Sensor 4642: fetched page 2 with 67 hourly records.
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO - Processing sensor 94/632 (sensor_id=4649)
+[2025-12-16T23:17:17.217+0000] {subprocess.py:93} INFO -   Sensor 4649: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO -   Sensor 4649: fetched page 2 with 67 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Processing sensor 95/632 (sensor_id=4650)
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO -   Sensor 4650: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO -   Sensor 4650: fetched page 2 with 67 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Rate limited for sensor 4650, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Rate limited for sensor 4650, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Processing sensor 96/632 (sensor_id=50)
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO -   Sensor 50: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO -   Sensor 50: fetched page 2 with 67 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Processing sensor 97/632 (sensor_id=51)
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Processing sensor 98/632 (sensor_id=4276093)
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Processing sensor 99/632 (sensor_id=52)
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO -   Sensor 52: fetched page 1 with 100 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO -   Sensor 52: fetched page 2 with 50 hourly records.
+[2025-12-16T23:17:17.218+0000] {subprocess.py:93} INFO - Processing sensor 100/632 (sensor_id=4612)
+[2025-12-16T23:17:17.219+0000] {subprocess.py:93} INFO -   Sensor 4612: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.693+0000] {subprocess.py:93} INFO -   Sensor 4612: fetched page 2 with 44 hourly records.
+[2025-12-16T23:22:21.699+0000] {subprocess.py:93} INFO - Processing sensor 101/632 (sensor_id=53)
+[2025-12-16T23:22:21.700+0000] {subprocess.py:93} INFO - Processing sensor 102/632 (sensor_id=58)
+[2025-12-16T23:22:21.702+0000] {subprocess.py:93} INFO -   Sensor 58: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.703+0000] {subprocess.py:93} INFO -   Sensor 58: fetched page 2 with 58 hourly records.
+[2025-12-16T23:22:21.703+0000] {subprocess.py:93} INFO - Processing sensor 103/632 (sensor_id=87)
+[2025-12-16T23:22:21.704+0000] {subprocess.py:93} INFO -   Sensor 87: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.704+0000] {subprocess.py:93} INFO -   Sensor 87: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.705+0000] {subprocess.py:93} INFO - Processing sensor 104/632 (sensor_id=59)
+[2025-12-16T23:22:21.706+0000] {subprocess.py:93} INFO -   Sensor 59: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.706+0000] {subprocess.py:93} INFO -   Sensor 59: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.706+0000] {subprocess.py:93} INFO - Processing sensor 105/632 (sensor_id=4275972)
+[2025-12-16T23:22:21.706+0000] {subprocess.py:93} INFO -   Sensor 4275972: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.707+0000] {subprocess.py:93} INFO -   Sensor 4275972: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.707+0000] {subprocess.py:93} INFO - Processing sensor 106/632 (sensor_id=4217)
+[2025-12-16T23:22:21.707+0000] {subprocess.py:93} INFO -   Sensor 4217: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.707+0000] {subprocess.py:93} INFO -   Sensor 4217: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.708+0000] {subprocess.py:93} INFO - Processing sensor 107/632 (sensor_id=4216)
+[2025-12-16T23:22:21.708+0000] {subprocess.py:93} INFO -   Sensor 4216: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.708+0000] {subprocess.py:93} INFO -   Sensor 4216: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.708+0000] {subprocess.py:93} INFO - Rate limited for sensor 4216, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:22:21.708+0000] {subprocess.py:93} INFO - Rate limited for sensor 4216, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:22:21.709+0000] {subprocess.py:93} INFO - Processing sensor 108/632 (sensor_id=61)
+[2025-12-16T23:22:21.709+0000] {subprocess.py:93} INFO -   Sensor 61: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.709+0000] {subprocess.py:93} INFO -   Sensor 61: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.709+0000] {subprocess.py:93} INFO - Processing sensor 109/632 (sensor_id=62)
+[2025-12-16T23:22:21.709+0000] {subprocess.py:93} INFO - Processing sensor 110/632 (sensor_id=4990)
+[2025-12-16T23:22:21.710+0000] {subprocess.py:93} INFO - Processing sensor 111/632 (sensor_id=4987)
+[2025-12-16T23:22:21.710+0000] {subprocess.py:93} INFO - Processing sensor 112/632 (sensor_id=4986)
+[2025-12-16T23:22:21.710+0000] {subprocess.py:93} INFO - Processing sensor 113/632 (sensor_id=4985)
+[2025-12-16T23:22:21.710+0000] {subprocess.py:93} INFO - Processing sensor 114/632 (sensor_id=63)
+[2025-12-16T23:22:21.710+0000] {subprocess.py:93} INFO - Processing sensor 115/632 (sensor_id=4984)
+[2025-12-16T23:22:21.710+0000] {subprocess.py:93} INFO - Processing sensor 116/632 (sensor_id=4275805)
+[2025-12-16T23:22:21.711+0000] {subprocess.py:93} INFO -   Sensor 4275805: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.711+0000] {subprocess.py:93} INFO -   Sensor 4275805: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.711+0000] {subprocess.py:93} INFO - Processing sensor 117/632 (sensor_id=64)
+[2025-12-16T23:22:21.711+0000] {subprocess.py:93} INFO -   Sensor 64: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.711+0000] {subprocess.py:93} INFO -   Sensor 64: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.711+0000] {subprocess.py:93} INFO - Processing sensor 118/632 (sensor_id=4194)
+[2025-12-16T23:22:21.712+0000] {subprocess.py:93} INFO -   Sensor 4194: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.712+0000] {subprocess.py:93} INFO -   Sensor 4194: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.712+0000] {subprocess.py:93} INFO - Processing sensor 119/632 (sensor_id=4198)
+[2025-12-16T23:22:21.712+0000] {subprocess.py:93} INFO -   Sensor 4198: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.712+0000] {subprocess.py:93} INFO -   Sensor 4198: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.713+0000] {subprocess.py:93} INFO - Processing sensor 120/632 (sensor_id=4202)
+[2025-12-16T23:22:21.713+0000] {subprocess.py:93} INFO -   Sensor 4202: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.713+0000] {subprocess.py:93} INFO -   Sensor 4202: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.713+0000] {subprocess.py:93} INFO - Processing sensor 121/632 (sensor_id=65)
+[2025-12-16T23:22:21.713+0000] {subprocess.py:93} INFO - Processing sensor 122/632 (sensor_id=4182)
+[2025-12-16T23:22:21.713+0000] {subprocess.py:93} INFO - Processing sensor 123/632 (sensor_id=4228)
+[2025-12-16T23:22:21.714+0000] {subprocess.py:93} INFO - Processing sensor 124/632 (sensor_id=4533)
+[2025-12-16T23:22:21.714+0000] {subprocess.py:93} INFO -   Sensor 4533: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.714+0000] {subprocess.py:93} INFO - Rate limited for sensor 4533, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:22:21.714+0000] {subprocess.py:93} INFO - Rate limited for sensor 4533, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:22:21.714+0000] {subprocess.py:93} INFO - Rate limited for sensor 4533, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:22:21.714+0000] {subprocess.py:93} INFO - Processing sensor 125/632 (sensor_id=4099)
+[2025-12-16T23:22:21.715+0000] {subprocess.py:93} INFO -   Sensor 4099: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.715+0000] {subprocess.py:93} INFO -   Sensor 4099: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.715+0000] {subprocess.py:93} INFO - Processing sensor 126/632 (sensor_id=1647)
+[2025-12-16T23:22:21.715+0000] {subprocess.py:93} INFO - Processing sensor 127/632 (sensor_id=1454)
+[2025-12-16T23:22:21.715+0000] {subprocess.py:93} INFO - Processing sensor 128/632 (sensor_id=1445)
+[2025-12-16T23:22:21.715+0000] {subprocess.py:93} INFO - Processing sensor 129/632 (sensor_id=1465)
+[2025-12-16T23:22:21.716+0000] {subprocess.py:93} INFO - Processing sensor 130/632 (sensor_id=1464)
+[2025-12-16T23:22:21.716+0000] {subprocess.py:93} INFO - Processing sensor 131/632 (sensor_id=1446)
+[2025-12-16T23:22:21.716+0000] {subprocess.py:93} INFO - Processing sensor 132/632 (sensor_id=66)
+[2025-12-16T23:22:21.716+0000] {subprocess.py:93} INFO - Processing sensor 133/632 (sensor_id=9180)
+[2025-12-16T23:22:21.716+0000] {subprocess.py:93} INFO - Processing sensor 134/632 (sensor_id=9181)
+[2025-12-16T23:22:21.716+0000] {subprocess.py:93} INFO - Processing sensor 135/632 (sensor_id=9182)
+[2025-12-16T23:22:21.716+0000] {subprocess.py:93} INFO - Processing sensor 136/632 (sensor_id=9217)
+[2025-12-16T23:22:21.717+0000] {subprocess.py:93} INFO - Processing sensor 137/632 (sensor_id=67)
+[2025-12-16T23:22:21.717+0000] {subprocess.py:93} INFO -   Sensor 67: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.717+0000] {subprocess.py:93} INFO -   Sensor 67: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.717+0000] {subprocess.py:93} INFO - Processing sensor 138/632 (sensor_id=9183)
+[2025-12-16T23:22:21.717+0000] {subprocess.py:93} INFO - Processing sensor 139/632 (sensor_id=108)
+[2025-12-16T23:22:21.717+0000] {subprocess.py:93} INFO - Processing sensor 140/632 (sensor_id=150)
+[2025-12-16T23:22:21.717+0000] {subprocess.py:93} INFO - Processing sensor 141/632 (sensor_id=1460)
+[2025-12-16T23:22:21.718+0000] {subprocess.py:93} INFO - Processing sensor 142/632 (sensor_id=69)
+[2025-12-16T23:22:21.718+0000] {subprocess.py:93} INFO - Processing sensor 143/632 (sensor_id=123)
+[2025-12-16T23:22:21.718+0000] {subprocess.py:93} INFO - Processing sensor 144/632 (sensor_id=92)
+[2025-12-16T23:22:21.718+0000] {subprocess.py:93} INFO - Processing sensor 145/632 (sensor_id=74)
+[2025-12-16T23:22:21.718+0000] {subprocess.py:93} INFO - Processing sensor 146/632 (sensor_id=70)
+[2025-12-16T23:22:21.718+0000] {subprocess.py:93} INFO - Processing sensor 147/632 (sensor_id=398)
+[2025-12-16T23:22:21.719+0000] {subprocess.py:93} INFO - Processing sensor 148/632 (sensor_id=12234791)
+[2025-12-16T23:22:21.719+0000] {subprocess.py:93} INFO -   Sensor 12234791: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.719+0000] {subprocess.py:93} INFO -   Sensor 12234791: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.719+0000] {subprocess.py:93} INFO - Processing sensor 149/632 (sensor_id=12234792)
+[2025-12-16T23:22:21.719+0000] {subprocess.py:93} INFO - Rate limited for sensor 12234792, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:22:21.719+0000] {subprocess.py:93} INFO - Rate limited for sensor 12234792, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:22:21.719+0000] {subprocess.py:93} INFO - Rate limited for sensor 12234792, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO - Processing sensor 150/632 (sensor_id=12234793)
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO -   Sensor 12234793: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO -   Sensor 12234793: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO - Processing sensor 151/632 (sensor_id=400)
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO - Processing sensor 152/632 (sensor_id=14340716)
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO -   Sensor 14340716: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO -   Sensor 14340716: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.720+0000] {subprocess.py:93} INFO - Processing sensor 153/632 (sensor_id=12234794)
+[2025-12-16T23:22:21.721+0000] {subprocess.py:93} INFO -   Sensor 12234794: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.721+0000] {subprocess.py:93} INFO -   Sensor 12234794: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.721+0000] {subprocess.py:93} INFO - Processing sensor 154/632 (sensor_id=71)
+[2025-12-16T23:22:21.721+0000] {subprocess.py:93} INFO - Processing sensor 155/632 (sensor_id=395)
+[2025-12-16T23:22:21.721+0000] {subprocess.py:93} INFO - Processing sensor 156/632 (sensor_id=12234795)
+[2025-12-16T23:22:21.721+0000] {subprocess.py:93} INFO -   Sensor 12234795: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.721+0000] {subprocess.py:93} INFO -   Sensor 12234795: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.722+0000] {subprocess.py:93} INFO - Processing sensor 157/632 (sensor_id=396)
+[2025-12-16T23:22:21.722+0000] {subprocess.py:93} INFO - Processing sensor 158/632 (sensor_id=12234796)
+[2025-12-16T23:22:21.722+0000] {subprocess.py:93} INFO -   Sensor 12234796: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.722+0000] {subprocess.py:93} INFO -   Sensor 12234796: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.722+0000] {subprocess.py:93} INFO - Processing sensor 159/632 (sensor_id=12234797)
+[2025-12-16T23:22:21.722+0000] {subprocess.py:93} INFO -   Sensor 12234797: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.722+0000] {subprocess.py:93} INFO -   Sensor 12234797: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.723+0000] {subprocess.py:93} INFO - Processing sensor 160/632 (sensor_id=12234798)
+[2025-12-16T23:22:21.723+0000] {subprocess.py:93} INFO -   Sensor 12234798: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.723+0000] {subprocess.py:93} INFO -   Sensor 12234798: fetched page 2 with 54 hourly records.
+[2025-12-16T23:22:21.723+0000] {subprocess.py:93} INFO - Processing sensor 161/632 (sensor_id=397)
+[2025-12-16T23:22:21.723+0000] {subprocess.py:93} INFO - Processing sensor 162/632 (sensor_id=12234799)
+[2025-12-16T23:22:21.723+0000] {subprocess.py:93} INFO -   Sensor 12234799: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.723+0000] {subprocess.py:93} INFO -   Sensor 12234799: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO - Processing sensor 163/632 (sensor_id=14340717)
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO -   Sensor 14340717: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO - Rate limited for sensor 14340717, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO - Rate limited for sensor 14340717, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO - Rate limited for sensor 14340717, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO - Processing sensor 164/632 (sensor_id=14340718)
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO -   Sensor 14340718: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.724+0000] {subprocess.py:93} INFO -   Sensor 14340718: fetched page 2 with 64 hourly records.
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO - Processing sensor 165/632 (sensor_id=4275809)
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO -   Sensor 4275809: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO -   Sensor 4275809: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO - Processing sensor 166/632 (sensor_id=72)
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO -   Sensor 72: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO -   Sensor 72: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO - Processing sensor 167/632 (sensor_id=4162)
+[2025-12-16T23:22:21.725+0000] {subprocess.py:93} INFO -   Sensor 4162: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO -   Sensor 4162: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO - Processing sensor 168/632 (sensor_id=4158)
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO -   Sensor 4158: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO -   Sensor 4158: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO - Processing sensor 169/632 (sensor_id=4154)
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO -   Sensor 4154: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO -   Sensor 4154: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.726+0000] {subprocess.py:93} INFO - Processing sensor 170/632 (sensor_id=4276171)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 171/632 (sensor_id=4299)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 172/632 (sensor_id=4300)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 173/632 (sensor_id=73)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 174/632 (sensor_id=5079217)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 175/632 (sensor_id=4385)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 176/632 (sensor_id=1516)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 177/632 (sensor_id=4387)
+[2025-12-16T23:22:21.727+0000] {subprocess.py:93} INFO - Processing sensor 178/632 (sensor_id=76)
+[2025-12-16T23:22:21.728+0000] {subprocess.py:93} INFO -   Sensor 76: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.728+0000] {subprocess.py:93} INFO -   Sensor 76: fetched page 2 with 65 hourly records.
+[2025-12-16T23:22:21.728+0000] {subprocess.py:93} INFO - Processing sensor 179/632 (sensor_id=3013)
+[2025-12-16T23:22:21.728+0000] {subprocess.py:93} INFO -   Sensor 3013: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.728+0000] {subprocess.py:93} INFO - Rate limited for sensor 3013, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:22:21.728+0000] {subprocess.py:93} INFO - Rate limited for sensor 3013, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:22:21.728+0000] {subprocess.py:93} INFO -   Sensor 3013: fetched page 2 with 65 hourly records.
+[2025-12-16T23:22:21.729+0000] {subprocess.py:93} INFO - Processing sensor 180/632 (sensor_id=1682)
+[2025-12-16T23:22:21.729+0000] {subprocess.py:93} INFO - Processing sensor 181/632 (sensor_id=4276081)
+[2025-12-16T23:22:21.729+0000] {subprocess.py:93} INFO -   Sensor 4276081: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.729+0000] {subprocess.py:93} INFO -   Sensor 4276081: fetched page 2 with 67 hourly records.
+[2025-12-16T23:22:21.729+0000] {subprocess.py:93} INFO - Processing sensor 182/632 (sensor_id=4117)
+[2025-12-16T23:22:21.729+0000] {subprocess.py:93} INFO -   Sensor 4117: fetched page 1 with 100 hourly records.
+[2025-12-16T23:22:21.729+0000] {subprocess.py:93} INFO -   Sensor 4117: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.807+0000] {subprocess.py:93} INFO - Processing sensor 183/632 (sensor_id=1301475)
+[2025-12-16T23:27:16.813+0000] {subprocess.py:93} INFO - Processing sensor 184/632 (sensor_id=77)
+[2025-12-16T23:27:16.814+0000] {subprocess.py:93} INFO -   Sensor 77: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.815+0000] {subprocess.py:93} INFO -   Sensor 77: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.815+0000] {subprocess.py:93} INFO - Processing sensor 185/632 (sensor_id=4118)
+[2025-12-16T23:27:16.816+0000] {subprocess.py:93} INFO -   Sensor 4118: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.817+0000] {subprocess.py:93} INFO -   Sensor 4118: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.817+0000] {subprocess.py:93} INFO - Processing sensor 186/632 (sensor_id=84)
+[2025-12-16T23:27:16.817+0000] {subprocess.py:93} INFO - Processing sensor 187/632 (sensor_id=22240)
+[2025-12-16T23:27:16.818+0000] {subprocess.py:93} INFO - Processing sensor 188/632 (sensor_id=22211)
+[2025-12-16T23:27:16.818+0000] {subprocess.py:93} INFO - Processing sensor 189/632 (sensor_id=83)
+[2025-12-16T23:27:16.818+0000] {subprocess.py:93} INFO - Processing sensor 190/632 (sensor_id=22241)
+[2025-12-16T23:27:16.819+0000] {subprocess.py:93} INFO - Processing sensor 191/632 (sensor_id=85)
+[2025-12-16T23:27:16.819+0000] {subprocess.py:93} INFO - Processing sensor 192/632 (sensor_id=4275687)
+[2025-12-16T23:27:16.819+0000] {subprocess.py:93} INFO -   Sensor 4275687: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.819+0000] {subprocess.py:93} INFO -   Sensor 4275687: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.820+0000] {subprocess.py:93} INFO - Processing sensor 193/632 (sensor_id=4474)
+[2025-12-16T23:27:16.820+0000] {subprocess.py:93} INFO -   Sensor 4474: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.820+0000] {subprocess.py:93} INFO -   Sensor 4474: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.820+0000] {subprocess.py:93} INFO - Processing sensor 194/632 (sensor_id=4690)
+[2025-12-16T23:27:16.821+0000] {subprocess.py:93} INFO -   Sensor 4690: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.821+0000] {subprocess.py:93} INFO -   Sensor 4690: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.821+0000] {subprocess.py:93} INFO - Rate limited for sensor 4690, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:27:16.821+0000] {subprocess.py:93} INFO - Rate limited for sensor 4690, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:27:16.821+0000] {subprocess.py:93} INFO - Processing sensor 195/632 (sensor_id=4355)
+[2025-12-16T23:27:16.822+0000] {subprocess.py:93} INFO -   Sensor 4355: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.822+0000] {subprocess.py:93} INFO -   Sensor 4355: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.822+0000] {subprocess.py:93} INFO - Processing sensor 196/632 (sensor_id=1513)
+[2025-12-16T23:27:16.822+0000] {subprocess.py:93} INFO - Processing sensor 197/632 (sensor_id=1514)
+[2025-12-16T23:27:16.823+0000] {subprocess.py:93} INFO - Processing sensor 198/632 (sensor_id=86)
+[2025-12-16T23:27:16.823+0000] {subprocess.py:93} INFO - Processing sensor 199/632 (sensor_id=1511)
+[2025-12-16T23:27:16.823+0000] {subprocess.py:93} INFO - Processing sensor 200/632 (sensor_id=1507)
+[2025-12-16T23:27:16.823+0000] {subprocess.py:93} INFO - Processing sensor 201/632 (sensor_id=1509)
+[2025-12-16T23:27:16.823+0000] {subprocess.py:93} INFO - Processing sensor 202/632 (sensor_id=88)
+[2025-12-16T23:27:16.823+0000] {subprocess.py:93} INFO -   Sensor 88: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.824+0000] {subprocess.py:93} INFO -   Sensor 88: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.824+0000] {subprocess.py:93} INFO - Processing sensor 203/632 (sensor_id=206)
+[2025-12-16T23:27:16.824+0000] {subprocess.py:93} INFO - Processing sensor 204/632 (sensor_id=89)
+[2025-12-16T23:27:16.824+0000] {subprocess.py:93} INFO -   Sensor 89: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.824+0000] {subprocess.py:93} INFO -   Sensor 89: fetched page 2 with 65 hourly records.
+[2025-12-16T23:27:16.824+0000] {subprocess.py:93} INFO - Processing sensor 205/632 (sensor_id=4275843)
+[2025-12-16T23:27:16.825+0000] {subprocess.py:93} INFO -   Sensor 4275843: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.825+0000] {subprocess.py:93} INFO -   Sensor 4275843: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.825+0000] {subprocess.py:93} INFO - Processing sensor 206/632 (sensor_id=4496)
+[2025-12-16T23:27:16.825+0000] {subprocess.py:93} INFO -   Sensor 4496: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.825+0000] {subprocess.py:93} INFO -   Sensor 4496: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.825+0000] {subprocess.py:93} INFO - Processing sensor 207/632 (sensor_id=4635)
+[2025-12-16T23:27:16.826+0000] {subprocess.py:93} INFO -   Sensor 4635: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.826+0000] {subprocess.py:93} INFO -   Sensor 4635: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.826+0000] {subprocess.py:93} INFO - Processing sensor 208/632 (sensor_id=91)
+[2025-12-16T23:27:16.826+0000] {subprocess.py:93} INFO -   Sensor 91: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.826+0000] {subprocess.py:93} INFO -   Sensor 91: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.826+0000] {subprocess.py:93} INFO - Processing sensor 209/632 (sensor_id=4519)
+[2025-12-16T23:27:16.827+0000] {subprocess.py:93} INFO -   Sensor 4519: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.827+0000] {subprocess.py:93} INFO - Rate limited for sensor 4519, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:27:16.827+0000] {subprocess.py:93} INFO - Rate limited for sensor 4519, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:27:16.827+0000] {subprocess.py:93} INFO - Rate limited for sensor 4519, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:27:16.827+0000] {subprocess.py:93} INFO - Processing sensor 210/632 (sensor_id=93)
+[2025-12-16T23:27:16.827+0000] {subprocess.py:93} INFO - Processing sensor 211/632 (sensor_id=94)
+[2025-12-16T23:27:16.828+0000] {subprocess.py:93} INFO - Processing sensor 212/632 (sensor_id=9210)
+[2025-12-16T23:27:16.828+0000] {subprocess.py:93} INFO - Processing sensor 213/632 (sensor_id=9211)
+[2025-12-16T23:27:16.828+0000] {subprocess.py:93} INFO - Processing sensor 214/632 (sensor_id=9213)
+[2025-12-16T23:27:16.828+0000] {subprocess.py:93} INFO - Processing sensor 215/632 (sensor_id=1379)
+[2025-12-16T23:27:16.829+0000] {subprocess.py:93} INFO -   Sensor 1379: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.829+0000] {subprocess.py:93} INFO -   Sensor 1379: fetched page 2 with 55 hourly records.
+[2025-12-16T23:27:16.829+0000] {subprocess.py:93} INFO - Processing sensor 216/632 (sensor_id=95)
+[2025-12-16T23:27:16.829+0000] {subprocess.py:93} INFO -   Sensor 95: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.829+0000] {subprocess.py:93} INFO -   Sensor 95: fetched page 2 with 55 hourly records.
+[2025-12-16T23:27:16.829+0000] {subprocess.py:93} INFO - Processing sensor 217/632 (sensor_id=9215)
+[2025-12-16T23:27:16.830+0000] {subprocess.py:93} INFO -   Sensor 9215: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.830+0000] {subprocess.py:93} INFO -   Sensor 9215: fetched page 2 with 63 hourly records.
+[2025-12-16T23:27:16.830+0000] {subprocess.py:93} INFO - Processing sensor 218/632 (sensor_id=98)
+[2025-12-16T23:27:16.830+0000] {subprocess.py:93} INFO - Processing sensor 219/632 (sensor_id=99)
+[2025-12-16T23:27:16.830+0000] {subprocess.py:93} INFO - Processing sensor 220/632 (sensor_id=96)
+[2025-12-16T23:27:16.830+0000] {subprocess.py:93} INFO - Processing sensor 221/632 (sensor_id=97)
+[2025-12-16T23:27:16.830+0000] {subprocess.py:93} INFO - Processing sensor 222/632 (sensor_id=9187)
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO - Processing sensor 223/632 (sensor_id=103)
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO - Processing sensor 224/632 (sensor_id=102)
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO - Processing sensor 225/632 (sensor_id=100)
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO - Processing sensor 226/632 (sensor_id=104)
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO - Processing sensor 227/632 (sensor_id=101)
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO - Processing sensor 228/632 (sensor_id=5294)
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO -   Sensor 5294: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.831+0000] {subprocess.py:93} INFO -   Sensor 5294: fetched page 2 with 64 hourly records.
+[2025-12-16T23:27:16.832+0000] {subprocess.py:93} INFO - Processing sensor 229/632 (sensor_id=105)
+[2025-12-16T23:27:16.832+0000] {subprocess.py:93} INFO -   Sensor 105: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.832+0000] {subprocess.py:93} INFO -   Sensor 105: fetched page 2 with 64 hourly records.
+[2025-12-16T23:27:16.832+0000] {subprocess.py:93} INFO - Processing sensor 230/632 (sensor_id=655)
+[2025-12-16T23:27:16.832+0000] {subprocess.py:93} INFO - Rate limited for sensor 655, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:27:16.832+0000] {subprocess.py:93} INFO - Rate limited for sensor 655, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:27:16.833+0000] {subprocess.py:93} INFO - Rate limited for sensor 655, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:27:16.833+0000] {subprocess.py:93} INFO - Processing sensor 231/632 (sensor_id=19858)
+[2025-12-16T23:27:16.833+0000] {subprocess.py:93} INFO - Processing sensor 232/632 (sensor_id=2171)
+[2025-12-16T23:27:16.833+0000] {subprocess.py:93} INFO - Processing sensor 233/632 (sensor_id=5187)
+[2025-12-16T23:27:16.833+0000] {subprocess.py:93} INFO -   Sensor 5187: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.833+0000] {subprocess.py:93} INFO -   Sensor 5187: fetched page 2 with 36 hourly records.
+[2025-12-16T23:27:16.833+0000] {subprocess.py:93} INFO - Processing sensor 234/632 (sensor_id=106)
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO -   Sensor 106: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO -   Sensor 106: fetched page 2 with 36 hourly records.
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO - Processing sensor 235/632 (sensor_id=19857)
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO -   Sensor 19857: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO -   Sensor 19857: fetched page 2 with 48 hourly records.
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO - Processing sensor 236/632 (sensor_id=4276107)
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO -   Sensor 4276107: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.834+0000] {subprocess.py:93} INFO -   Sensor 4276107: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.835+0000] {subprocess.py:93} INFO - Processing sensor 237/632 (sensor_id=109)
+[2025-12-16T23:27:16.835+0000] {subprocess.py:93} INFO -   Sensor 109: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.835+0000] {subprocess.py:93} INFO -   Sensor 109: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.835+0000] {subprocess.py:93} INFO - Processing sensor 238/632 (sensor_id=4139)
+[2025-12-16T23:27:16.835+0000] {subprocess.py:93} INFO -   Sensor 4139: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.835+0000] {subprocess.py:93} INFO -   Sensor 4139: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO - Processing sensor 239/632 (sensor_id=4196)
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO -   Sensor 4196: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO -   Sensor 4196: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO - Processing sensor 240/632 (sensor_id=4610)
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO -   Sensor 4610: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO -   Sensor 4610: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO - Processing sensor 241/632 (sensor_id=110)
+[2025-12-16T23:27:16.836+0000] {subprocess.py:93} INFO -   Sensor 110: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.837+0000] {subprocess.py:93} INFO -   Sensor 110: fetched page 2 with 19 hourly records.
+[2025-12-16T23:27:16.837+0000] {subprocess.py:93} INFO - Processing sensor 242/632 (sensor_id=3538)
+[2025-12-16T23:27:16.837+0000] {subprocess.py:93} INFO -   Sensor 3538: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.837+0000] {subprocess.py:93} INFO - Rate limited for sensor 3538, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:27:16.837+0000] {subprocess.py:93} INFO - Rate limited for sensor 3538, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:27:16.837+0000] {subprocess.py:93} INFO -   Sensor 3538: fetched page 2 with 19 hourly records.
+[2025-12-16T23:27:16.837+0000] {subprocess.py:93} INFO - Processing sensor 243/632 (sensor_id=4422)
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO - Processing sensor 244/632 (sensor_id=4425)
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO - Processing sensor 245/632 (sensor_id=4428)
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO - Processing sensor 246/632 (sensor_id=3511)
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO -   Sensor 3511: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO -   Sensor 3511: fetched page 2 with 65 hourly records.
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO - Processing sensor 247/632 (sensor_id=1738)
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO -   Sensor 1738: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO -   Sensor 1738: fetched page 2 with 65 hourly records.
+[2025-12-16T23:27:16.838+0000] {subprocess.py:93} INFO - Processing sensor 248/632 (sensor_id=111)
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO -   Sensor 111: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO -   Sensor 111: fetched page 2 with 65 hourly records.
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO - Processing sensor 249/632 (sensor_id=112)
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO - Processing sensor 250/632 (sensor_id=4275734)
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO -   Sensor 4275734: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO -   Sensor 4275734: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO - Processing sensor 251/632 (sensor_id=4155)
+[2025-12-16T23:27:16.839+0000] {subprocess.py:93} INFO -   Sensor 4155: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO -   Sensor 4155: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO - Processing sensor 252/632 (sensor_id=4152)
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO -   Sensor 4152: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO -   Sensor 4152: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO - Processing sensor 253/632 (sensor_id=4537)
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO -   Sensor 4537: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO -   Sensor 4537: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.840+0000] {subprocess.py:93} INFO - Processing sensor 254/632 (sensor_id=115)
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO -   Sensor 115: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO -   Sensor 115: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO - Processing sensor 255/632 (sensor_id=4150)
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO - Rate limited for sensor 4150, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO - Rate limited for sensor 4150, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO -   Sensor 4150: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO -   Sensor 4150: fetched page 2 with 67 hourly records.
+[2025-12-16T23:27:16.841+0000] {subprocess.py:93} INFO - Processing sensor 256/632 (sensor_id=4276124)
+[2025-12-16T23:27:16.842+0000] {subprocess.py:93} INFO - Processing sensor 257/632 (sensor_id=116)
+[2025-12-16T23:27:16.842+0000] {subprocess.py:93} INFO -   Sensor 116: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.842+0000] {subprocess.py:93} INFO -   Sensor 116: fetched page 2 with 61 hourly records.
+[2025-12-16T23:27:16.842+0000] {subprocess.py:93} INFO - Processing sensor 258/632 (sensor_id=4218)
+[2025-12-16T23:27:16.842+0000] {subprocess.py:93} INFO - Processing sensor 259/632 (sensor_id=4219)
+[2025-12-16T23:27:16.842+0000] {subprocess.py:93} INFO -   Sensor 4219: fetched page 1 with 100 hourly records.
+[2025-12-16T23:27:16.842+0000] {subprocess.py:93} INFO -   Sensor 4219: fetched page 2 with 56 hourly records.
+[2025-12-16T23:32:12.931+0000] {subprocess.py:93} INFO - Processing sensor 260/632 (sensor_id=4221)
+[2025-12-16T23:32:12.938+0000] {subprocess.py:93} INFO -   Sensor 4221: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.940+0000] {subprocess.py:93} INFO -   Sensor 4221: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.941+0000] {subprocess.py:93} INFO - Processing sensor 261/632 (sensor_id=1301476)
+[2025-12-16T23:32:12.941+0000] {subprocess.py:93} INFO -   Sensor 1301476: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.942+0000] {subprocess.py:93} INFO -   Sensor 1301476: fetched page 2 with 27 hourly records.
+[2025-12-16T23:32:12.944+0000] {subprocess.py:93} INFO - Processing sensor 262/632 (sensor_id=4608)
+[2025-12-16T23:32:12.945+0000] {subprocess.py:93} INFO - Processing sensor 263/632 (sensor_id=4621)
+[2025-12-16T23:32:12.945+0000] {subprocess.py:93} INFO - Processing sensor 264/632 (sensor_id=118)
+[2025-12-16T23:32:12.945+0000] {subprocess.py:93} INFO - Processing sensor 265/632 (sensor_id=164)
+[2025-12-16T23:32:12.946+0000] {subprocess.py:93} INFO -   Sensor 164: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.946+0000] {subprocess.py:93} INFO -   Sensor 164: fetched page 2 with 35 hourly records.
+[2025-12-16T23:32:12.946+0000] {subprocess.py:93} INFO - Processing sensor 266/632 (sensor_id=4275959)
+[2025-12-16T23:32:12.946+0000] {subprocess.py:93} INFO - Processing sensor 267/632 (sensor_id=4244)
+[2025-12-16T23:32:12.947+0000] {subprocess.py:93} INFO -   Sensor 4244: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.947+0000] {subprocess.py:93} INFO -   Sensor 4244: fetched page 2 with 35 hourly records.
+[2025-12-16T23:32:12.947+0000] {subprocess.py:93} INFO - Processing sensor 268/632 (sensor_id=4186)
+[2025-12-16T23:32:12.947+0000] {subprocess.py:93} INFO -   Sensor 4186: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.947+0000] {subprocess.py:93} INFO -   Sensor 4186: fetched page 2 with 33 hourly records.
+[2025-12-16T23:32:12.948+0000] {subprocess.py:93} INFO - Processing sensor 269/632 (sensor_id=119)
+[2025-12-16T23:32:12.948+0000] {subprocess.py:93} INFO - Rate limited for sensor 119, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:32:12.948+0000] {subprocess.py:93} INFO - Rate limited for sensor 119, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:32:12.948+0000] {subprocess.py:93} INFO - Rate limited for sensor 119, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:32:12.948+0000] {subprocess.py:93} INFO - Processing sensor 270/632 (sensor_id=4235)
+[2025-12-16T23:32:12.948+0000] {subprocess.py:93} INFO -   Sensor 4235: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.949+0000] {subprocess.py:93} INFO -   Sensor 4235: fetched page 2 with 35 hourly records.
+[2025-12-16T23:32:12.949+0000] {subprocess.py:93} INFO - Processing sensor 271/632 (sensor_id=5127)
+[2025-12-16T23:32:12.949+0000] {subprocess.py:93} INFO - Processing sensor 272/632 (sensor_id=120)
+[2025-12-16T23:32:12.949+0000] {subprocess.py:93} INFO - Processing sensor 273/632 (sensor_id=5410)
+[2025-12-16T23:32:12.949+0000] {subprocess.py:93} INFO - Processing sensor 274/632 (sensor_id=5155)
+[2025-12-16T23:32:12.949+0000] {subprocess.py:93} INFO - Processing sensor 275/632 (sensor_id=4276054)
+[2025-12-16T23:32:12.950+0000] {subprocess.py:93} INFO -   Sensor 4276054: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.950+0000] {subprocess.py:93} INFO -   Sensor 4276054: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.950+0000] {subprocess.py:93} INFO - Processing sensor 276/632 (sensor_id=4585)
+[2025-12-16T23:32:12.950+0000] {subprocess.py:93} INFO -   Sensor 4585: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.950+0000] {subprocess.py:93} INFO -   Sensor 4585: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.950+0000] {subprocess.py:93} INFO - Processing sensor 277/632 (sensor_id=4561)
+[2025-12-16T23:32:12.951+0000] {subprocess.py:93} INFO -   Sensor 4561: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.951+0000] {subprocess.py:93} INFO -   Sensor 4561: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.951+0000] {subprocess.py:93} INFO - Processing sensor 278/632 (sensor_id=121)
+[2025-12-16T23:32:12.951+0000] {subprocess.py:93} INFO -   Sensor 121: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.951+0000] {subprocess.py:93} INFO -   Sensor 121: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.951+0000] {subprocess.py:93} INFO - Processing sensor 279/632 (sensor_id=4275730)
+[2025-12-16T23:32:12.953+0000] {subprocess.py:93} INFO -   Sensor 4275730: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.953+0000] {subprocess.py:93} INFO -   Sensor 4275730: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.953+0000] {subprocess.py:93} INFO - Processing sensor 280/632 (sensor_id=4411)
+[2025-12-16T23:32:12.953+0000] {subprocess.py:93} INFO -   Sensor 4411: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO -   Sensor 4411: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO - Processing sensor 281/632 (sensor_id=4413)
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO -   Sensor 4413: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO -   Sensor 4413: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO - Processing sensor 282/632 (sensor_id=132)
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO -   Sensor 132: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO -   Sensor 132: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.954+0000] {subprocess.py:93} INFO - Rate limited for sensor 132, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:32:12.955+0000] {subprocess.py:93} INFO - Rate limited for sensor 132, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:32:12.955+0000] {subprocess.py:93} INFO - Processing sensor 283/632 (sensor_id=133)
+[2025-12-16T23:32:12.955+0000] {subprocess.py:93} INFO - Processing sensor 284/632 (sensor_id=134)
+[2025-12-16T23:32:12.955+0000] {subprocess.py:93} INFO - Processing sensor 285/632 (sensor_id=13218)
+[2025-12-16T23:32:12.955+0000] {subprocess.py:93} INFO - Processing sensor 286/632 (sensor_id=607)
+[2025-12-16T23:32:12.956+0000] {subprocess.py:93} INFO - Processing sensor 287/632 (sensor_id=5334)
+[2025-12-16T23:32:12.956+0000] {subprocess.py:93} INFO - Processing sensor 288/632 (sensor_id=143)
+[2025-12-16T23:32:12.956+0000] {subprocess.py:93} INFO - Processing sensor 289/632 (sensor_id=5378)
+[2025-12-16T23:32:12.956+0000] {subprocess.py:93} INFO - Processing sensor 290/632 (sensor_id=4230)
+[2025-12-16T23:32:12.956+0000] {subprocess.py:93} INFO - Processing sensor 291/632 (sensor_id=4276167)
+[2025-12-16T23:32:12.956+0000] {subprocess.py:93} INFO -   Sensor 4276167: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.957+0000] {subprocess.py:93} INFO -   Sensor 4276167: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.957+0000] {subprocess.py:93} INFO - Processing sensor 292/632 (sensor_id=151)
+[2025-12-16T23:32:12.957+0000] {subprocess.py:93} INFO -   Sensor 151: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.957+0000] {subprocess.py:93} INFO -   Sensor 151: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.957+0000] {subprocess.py:93} INFO - Processing sensor 293/632 (sensor_id=4224)
+[2025-12-16T23:32:12.957+0000] {subprocess.py:93} INFO -   Sensor 4224: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.958+0000] {subprocess.py:93} INFO -   Sensor 4224: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.958+0000] {subprocess.py:93} INFO - Processing sensor 294/632 (sensor_id=4212)
+[2025-12-16T23:32:12.958+0000] {subprocess.py:93} INFO -   Sensor 4212: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.958+0000] {subprocess.py:93} INFO -   Sensor 4212: fetched page 2 with 67 hourly records.
+[2025-12-16T23:32:12.958+0000] {subprocess.py:93} INFO - Processing sensor 295/632 (sensor_id=155)
+[2025-12-16T23:32:12.958+0000] {subprocess.py:93} INFO - Processing sensor 296/632 (sensor_id=154)
+[2025-12-16T23:32:12.958+0000] {subprocess.py:93} INFO - Processing sensor 297/632 (sensor_id=152)
+[2025-12-16T23:32:12.959+0000] {subprocess.py:93} INFO - Processing sensor 298/632 (sensor_id=153)
+[2025-12-16T23:32:12.959+0000] {subprocess.py:93} INFO - Processing sensor 299/632 (sensor_id=156)
+[2025-12-16T23:32:12.959+0000] {subprocess.py:93} INFO - Processing sensor 300/632 (sensor_id=157)
+[2025-12-16T23:32:12.959+0000] {subprocess.py:93} INFO -   Sensor 157: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.959+0000] {subprocess.py:93} INFO -   Sensor 157: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.959+0000] {subprocess.py:93} INFO - Processing sensor 301/632 (sensor_id=4275709)
+[2025-12-16T23:32:12.960+0000] {subprocess.py:93} INFO - Processing sensor 302/632 (sensor_id=4364)
+[2025-12-16T23:32:12.960+0000] {subprocess.py:93} INFO - Rate limited for sensor 4364, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:32:12.960+0000] {subprocess.py:93} INFO - Rate limited for sensor 4364, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:32:12.960+0000] {subprocess.py:93} INFO - Rate limited for sensor 4364, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:32:12.960+0000] {subprocess.py:93} INFO - Processing sensor 303/632 (sensor_id=4461)
+[2025-12-16T23:32:12.960+0000] {subprocess.py:93} INFO -   Sensor 4461: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.960+0000] {subprocess.py:93} INFO -   Sensor 4461: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.961+0000] {subprocess.py:93} INFO - Processing sensor 304/632 (sensor_id=4383)
+[2025-12-16T23:32:12.961+0000] {subprocess.py:93} INFO -   Sensor 4383: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.961+0000] {subprocess.py:93} INFO -   Sensor 4383: fetched page 2 with 56 hourly records.
+[2025-12-16T23:32:12.961+0000] {subprocess.py:93} INFO - Processing sensor 305/632 (sensor_id=4390)
+[2025-12-16T23:32:12.961+0000] {subprocess.py:93} INFO -   Sensor 4390: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.961+0000] {subprocess.py:93} INFO -   Sensor 4390: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO - Processing sensor 306/632 (sensor_id=167)
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO - Processing sensor 307/632 (sensor_id=4275778)
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO - Processing sensor 308/632 (sensor_id=4280)
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO - Processing sensor 309/632 (sensor_id=4290)
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO - Processing sensor 310/632 (sensor_id=4367)
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO - Processing sensor 311/632 (sensor_id=158)
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO - Processing sensor 312/632 (sensor_id=165)
+[2025-12-16T23:32:12.962+0000] {subprocess.py:93} INFO -   Sensor 165: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.963+0000] {subprocess.py:93} INFO -   Sensor 165: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.963+0000] {subprocess.py:93} INFO - Processing sensor 313/632 (sensor_id=4276088)
+[2025-12-16T23:32:12.963+0000] {subprocess.py:93} INFO - Processing sensor 314/632 (sensor_id=4570)
+[2025-12-16T23:32:12.963+0000] {subprocess.py:93} INFO -   Sensor 4570: fetched page 1 with 81 hourly records.
+[2025-12-16T23:32:12.963+0000] {subprocess.py:93} INFO - Processing sensor 315/632 (sensor_id=4565)
+[2025-12-16T23:32:12.963+0000] {subprocess.py:93} INFO -   Sensor 4565: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.963+0000] {subprocess.py:93} INFO -   Sensor 4565: fetched page 2 with 56 hourly records.
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO - Processing sensor 316/632 (sensor_id=4541)
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO -   Sensor 4541: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO -   Sensor 4541: fetched page 2 with 59 hourly records.
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO - Processing sensor 317/632 (sensor_id=159)
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO -   Sensor 159: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO -   Sensor 159: fetched page 2 with 37 hourly records.
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO - Processing sensor 318/632 (sensor_id=4700)
+[2025-12-16T23:32:12.964+0000] {subprocess.py:93} INFO - Rate limited for sensor 4700, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:32:12.965+0000] {subprocess.py:93} INFO - Rate limited for sensor 4700, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:32:12.965+0000] {subprocess.py:93} INFO -   Sensor 4700: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.965+0000] {subprocess.py:93} INFO -   Sensor 4700: fetched page 2 with 56 hourly records.
+[2025-12-16T23:32:12.965+0000] {subprocess.py:93} INFO - Processing sensor 319/632 (sensor_id=4344)
+[2025-12-16T23:32:12.965+0000] {subprocess.py:93} INFO -   Sensor 4344: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.965+0000] {subprocess.py:93} INFO -   Sensor 4344: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.965+0000] {subprocess.py:93} INFO - Processing sensor 320/632 (sensor_id=160)
+[2025-12-16T23:32:12.966+0000] {subprocess.py:93} INFO -   Sensor 160: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.966+0000] {subprocess.py:93} INFO -   Sensor 160: fetched page 2 with 12 hourly records.
+[2025-12-16T23:32:12.966+0000] {subprocess.py:93} INFO - Processing sensor 321/632 (sensor_id=161)
+[2025-12-16T23:32:12.966+0000] {subprocess.py:93} INFO - Processing sensor 322/632 (sensor_id=162)
+[2025-12-16T23:32:12.966+0000] {subprocess.py:93} INFO - Processing sensor 323/632 (sensor_id=4275786)
+[2025-12-16T23:32:12.966+0000] {subprocess.py:93} INFO - Processing sensor 324/632 (sensor_id=4237)
+[2025-12-16T23:32:12.966+0000] {subprocess.py:93} INFO - Processing sensor 325/632 (sensor_id=4231)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO - Processing sensor 326/632 (sensor_id=4147)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO - Processing sensor 327/632 (sensor_id=4275834)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO - Processing sensor 328/632 (sensor_id=4187)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO - Processing sensor 329/632 (sensor_id=4112)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO - Processing sensor 330/632 (sensor_id=4687)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO - Processing sensor 331/632 (sensor_id=163)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO - Processing sensor 332/632 (sensor_id=166)
+[2025-12-16T23:32:12.967+0000] {subprocess.py:93} INFO -   Sensor 166: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO -   Sensor 166: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO - Processing sensor 333/632 (sensor_id=4276086)
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO - Processing sensor 334/632 (sensor_id=4370)
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO -   Sensor 4370: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO -   Sensor 4370: fetched page 2 with 61 hourly records.
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO - Processing sensor 335/632 (sensor_id=4369)
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO -   Sensor 4369: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.968+0000] {subprocess.py:93} INFO -   Sensor 4369: fetched page 2 with 56 hourly records.
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Processing sensor 336/632 (sensor_id=4215)
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Rate limited for sensor 4215, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Rate limited for sensor 4215, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Rate limited for sensor 4215, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Processing sensor 337/632 (sensor_id=169)
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Processing sensor 338/632 (sensor_id=13863)
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Processing sensor 339/632 (sensor_id=168)
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Processing sensor 340/632 (sensor_id=13862)
+[2025-12-16T23:32:12.969+0000] {subprocess.py:93} INFO - Processing sensor 341/632 (sensor_id=13861)
+[2025-12-16T23:32:12.970+0000] {subprocess.py:93} INFO - Processing sensor 342/632 (sensor_id=5079219)
+[2025-12-16T23:32:12.970+0000] {subprocess.py:93} INFO - Processing sensor 343/632 (sensor_id=5079221)
+[2025-12-16T23:32:12.970+0000] {subprocess.py:93} INFO - Processing sensor 344/632 (sensor_id=5079218)
+[2025-12-16T23:32:12.970+0000] {subprocess.py:93} INFO - Processing sensor 345/632 (sensor_id=5077838)
+[2025-12-16T23:32:12.970+0000] {subprocess.py:93} INFO -   Sensor 5077838: fetched page 1 with 100 hourly records.
+[2025-12-16T23:32:12.970+0000] {subprocess.py:93} INFO -   Sensor 5077838: fetched page 2 with 57 hourly records.
+[2025-12-16T23:32:12.970+0000] {subprocess.py:93} INFO - Processing sensor 346/632 (sensor_id=5079220)
+[2025-12-16T23:37:17.730+0000] {subprocess.py:93} INFO - Processing sensor 347/632 (sensor_id=209)
+[2025-12-16T23:37:17.733+0000] {subprocess.py:93} INFO - Processing sensor 348/632 (sensor_id=210)
+[2025-12-16T23:37:17.733+0000] {subprocess.py:93} INFO - Processing sensor 349/632 (sensor_id=208)
+[2025-12-16T23:37:17.734+0000] {subprocess.py:93} INFO - Processing sensor 350/632 (sensor_id=207)
+[2025-12-16T23:37:17.734+0000] {subprocess.py:93} INFO - Processing sensor 351/632 (sensor_id=1304749)
+[2025-12-16T23:37:17.734+0000] {subprocess.py:93} INFO - Processing sensor 352/632 (sensor_id=1304758)
+[2025-12-16T23:37:17.734+0000] {subprocess.py:93} INFO - Processing sensor 353/632 (sensor_id=211)
+[2025-12-16T23:37:17.734+0000] {subprocess.py:93} INFO - Processing sensor 354/632 (sensor_id=378)
+[2025-12-16T23:37:17.735+0000] {subprocess.py:93} INFO - Processing sensor 355/632 (sensor_id=444)
+[2025-12-16T23:37:17.735+0000] {subprocess.py:93} INFO - Processing sensor 356/632 (sensor_id=214)
+[2025-12-16T23:37:17.735+0000] {subprocess.py:93} INFO - Processing sensor 357/632 (sensor_id=445)
+[2025-12-16T23:37:17.735+0000] {subprocess.py:93} INFO - Processing sensor 358/632 (sensor_id=443)
+[2025-12-16T23:37:17.735+0000] {subprocess.py:93} INFO - Processing sensor 359/632 (sensor_id=215)
+[2025-12-16T23:37:17.735+0000] {subprocess.py:93} INFO - Processing sensor 360/632 (sensor_id=216)
+[2025-12-16T23:37:17.736+0000] {subprocess.py:93} INFO - Processing sensor 361/632 (sensor_id=237)
+[2025-12-16T23:37:17.736+0000] {subprocess.py:93} INFO -   Sensor 237: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.736+0000] {subprocess.py:93} INFO -   Sensor 237: fetched page 2 with 32 hourly records.
+[2025-12-16T23:37:17.736+0000] {subprocess.py:93} INFO - Processing sensor 362/632 (sensor_id=259)
+[2025-12-16T23:37:17.736+0000] {subprocess.py:93} INFO -   Sensor 259: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.736+0000] {subprocess.py:93} INFO - Rate limited for sensor 259, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:37:17.737+0000] {subprocess.py:93} INFO - Rate limited for sensor 259, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:37:17.737+0000] {subprocess.py:93} INFO - Rate limited for sensor 259, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:37:17.737+0000] {subprocess.py:93} INFO - Processing sensor 363/632 (sensor_id=217)
+[2025-12-16T23:37:17.737+0000] {subprocess.py:93} INFO - Rate limited for sensor 217, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:37:17.738+0000] {subprocess.py:93} INFO -   Sensor 217: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.738+0000] {subprocess.py:93} INFO -   Sensor 217: fetched page 2 with 18 hourly records.
+[2025-12-16T23:37:17.738+0000] {subprocess.py:93} INFO - Processing sensor 364/632 (sensor_id=261)
+[2025-12-16T23:37:17.738+0000] {subprocess.py:93} INFO -   Sensor 261: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.738+0000] {subprocess.py:93} INFO -   Sensor 261: fetched page 2 with 18 hourly records.
+[2025-12-16T23:37:17.738+0000] {subprocess.py:93} INFO - Processing sensor 365/632 (sensor_id=218)
+[2025-12-16T23:37:17.739+0000] {subprocess.py:93} INFO - Processing sensor 366/632 (sensor_id=219)
+[2025-12-16T23:37:17.739+0000] {subprocess.py:93} INFO - Processing sensor 367/632 (sensor_id=220)
+[2025-12-16T23:37:17.739+0000] {subprocess.py:93} INFO - Processing sensor 368/632 (sensor_id=223)
+[2025-12-16T23:37:17.739+0000] {subprocess.py:93} INFO - Processing sensor 369/632 (sensor_id=222)
+[2025-12-16T23:37:17.739+0000] {subprocess.py:93} INFO - Processing sensor 370/632 (sensor_id=224)
+[2025-12-16T23:37:17.739+0000] {subprocess.py:93} INFO - Processing sensor 371/632 (sensor_id=225)
+[2025-12-16T23:37:17.740+0000] {subprocess.py:93} INFO - Processing sensor 372/632 (sensor_id=226)
+[2025-12-16T23:37:17.740+0000] {subprocess.py:93} INFO - Processing sensor 373/632 (sensor_id=221)
+[2025-12-16T23:37:17.740+0000] {subprocess.py:93} INFO - Processing sensor 374/632 (sensor_id=251)
+[2025-12-16T23:37:17.740+0000] {subprocess.py:93} INFO -   Sensor 251: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.740+0000] {subprocess.py:93} INFO -   Sensor 251: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.740+0000] {subprocess.py:93} INFO - Processing sensor 375/632 (sensor_id=227)
+[2025-12-16T23:37:17.740+0000] {subprocess.py:93} INFO -   Sensor 227: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.741+0000] {subprocess.py:93} INFO -   Sensor 227: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.741+0000] {subprocess.py:93} INFO - Processing sensor 376/632 (sensor_id=1304692)
+[2025-12-16T23:37:17.741+0000] {subprocess.py:93} INFO - Processing sensor 377/632 (sensor_id=233)
+[2025-12-16T23:37:17.741+0000] {subprocess.py:93} INFO - Processing sensor 378/632 (sensor_id=253)
+[2025-12-16T23:37:17.741+0000] {subprocess.py:93} INFO - Processing sensor 379/632 (sensor_id=1298329)
+[2025-12-16T23:37:17.741+0000] {subprocess.py:93} INFO - Processing sensor 380/632 (sensor_id=228)
+[2025-12-16T23:37:17.742+0000] {subprocess.py:93} INFO - Processing sensor 381/632 (sensor_id=238)
+[2025-12-16T23:37:17.742+0000] {subprocess.py:93} INFO -   Sensor 238: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.742+0000] {subprocess.py:93} INFO -   Sensor 238: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.742+0000] {subprocess.py:93} INFO - Processing sensor 382/632 (sensor_id=229)
+[2025-12-16T23:37:17.742+0000] {subprocess.py:93} INFO -   Sensor 229: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.742+0000] {subprocess.py:93} INFO - Rate limited for sensor 229, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:37:17.742+0000] {subprocess.py:93} INFO - Rate limited for sensor 229, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:37:17.743+0000] {subprocess.py:93} INFO - Rate limited for sensor 229, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:37:17.743+0000] {subprocess.py:93} INFO - Processing sensor 383/632 (sensor_id=244)
+[2025-12-16T23:37:17.743+0000] {subprocess.py:93} INFO -   Sensor 244: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.744+0000] {subprocess.py:93} INFO -   Sensor 244: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.744+0000] {subprocess.py:93} INFO - Processing sensor 384/632 (sensor_id=232)
+[2025-12-16T23:37:17.744+0000] {subprocess.py:93} INFO -   Sensor 232: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.744+0000] {subprocess.py:93} INFO -   Sensor 232: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.744+0000] {subprocess.py:93} INFO - Processing sensor 385/632 (sensor_id=4933)
+[2025-12-16T23:37:17.745+0000] {subprocess.py:93} INFO -   Sensor 4933: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.745+0000] {subprocess.py:93} INFO -   Sensor 4933: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.745+0000] {subprocess.py:93} INFO - Processing sensor 386/632 (sensor_id=1304579)
+[2025-12-16T23:37:17.745+0000] {subprocess.py:93} INFO -   Sensor 1304579: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.745+0000] {subprocess.py:93} INFO -   Sensor 1304579: fetched page 2 with 58 hourly records.
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO - Processing sensor 387/632 (sensor_id=230)
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO -   Sensor 230: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO -   Sensor 230: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO - Processing sensor 388/632 (sensor_id=231)
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO -   Sensor 231: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO -   Sensor 231: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO - Processing sensor 389/632 (sensor_id=260)
+[2025-12-16T23:37:17.746+0000] {subprocess.py:93} INFO -   Sensor 260: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.747+0000] {subprocess.py:93} INFO -   Sensor 260: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.747+0000] {subprocess.py:93} INFO - Processing sensor 390/632 (sensor_id=12626389)
+[2025-12-16T23:37:17.747+0000] {subprocess.py:93} INFO -   Sensor 12626389: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.747+0000] {subprocess.py:93} INFO -   Sensor 12626389: fetched page 2 with 63 hourly records.
+[2025-12-16T23:37:17.747+0000] {subprocess.py:93} INFO - Processing sensor 391/632 (sensor_id=12626392)
+[2025-12-16T23:37:17.747+0000] {subprocess.py:93} INFO -   Sensor 12626392: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO -   Sensor 12626392: fetched page 2 with 63 hourly records.
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO - Processing sensor 392/632 (sensor_id=234)
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO -   Sensor 234: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO -   Sensor 234: fetched page 2 with 65 hourly records.
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO - Processing sensor 393/632 (sensor_id=12915957)
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO - Rate limited for sensor 12915957, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO - Rate limited for sensor 12915957, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:37:17.748+0000] {subprocess.py:93} INFO -   Sensor 12915957: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.749+0000] {subprocess.py:93} INFO -   Sensor 12915957: fetched page 2 with 65 hourly records.
+[2025-12-16T23:37:17.749+0000] {subprocess.py:93} INFO - Processing sensor 394/632 (sensor_id=256)
+[2025-12-16T23:37:17.749+0000] {subprocess.py:93} INFO -   Sensor 256: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.749+0000] {subprocess.py:93} INFO -   Sensor 256: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.749+0000] {subprocess.py:93} INFO - Processing sensor 395/632 (sensor_id=236)
+[2025-12-16T23:37:17.749+0000] {subprocess.py:93} INFO -   Sensor 236: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.749+0000] {subprocess.py:93} INFO -   Sensor 236: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO - Processing sensor 396/632 (sensor_id=235)
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO -   Sensor 235: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO -   Sensor 235: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO - Processing sensor 397/632 (sensor_id=239)
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO -   Sensor 239: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO -   Sensor 239: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO - Processing sensor 398/632 (sensor_id=240)
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO -   Sensor 240: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.750+0000] {subprocess.py:93} INFO -   Sensor 240: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.751+0000] {subprocess.py:93} INFO - Processing sensor 399/632 (sensor_id=1928199)
+[2025-12-16T23:37:17.751+0000] {subprocess.py:93} INFO -   Sensor 1928199: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.751+0000] {subprocess.py:93} INFO -   Sensor 1928199: fetched page 2 with 63 hourly records.
+[2025-12-16T23:37:17.751+0000] {subprocess.py:93} INFO - Processing sensor 400/632 (sensor_id=1927060)
+[2025-12-16T23:37:17.751+0000] {subprocess.py:93} INFO -   Sensor 1927060: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.751+0000] {subprocess.py:93} INFO -   Sensor 1927060: fetched page 2 with 63 hourly records.
+[2025-12-16T23:37:17.751+0000] {subprocess.py:93} INFO - Processing sensor 401/632 (sensor_id=1304850)
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO -   Sensor 1304850: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO -   Sensor 1304850: fetched page 2 with 62 hourly records.
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO - Processing sensor 402/632 (sensor_id=241)
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO -   Sensor 241: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO -   Sensor 241: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO - Processing sensor 403/632 (sensor_id=243)
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO - Rate limited for sensor 243, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:37:17.752+0000] {subprocess.py:93} INFO - Rate limited for sensor 243, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO -   Sensor 243: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO -   Sensor 243: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO - Processing sensor 404/632 (sensor_id=245)
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO -   Sensor 245: fetched page 1 with 83 hourly records.
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO - Processing sensor 405/632 (sensor_id=246)
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO -   Sensor 246: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO -   Sensor 246: fetched page 2 with 63 hourly records.
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO - Processing sensor 406/632 (sensor_id=4957)
+[2025-12-16T23:37:17.753+0000] {subprocess.py:93} INFO -   Sensor 4957: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.754+0000] {subprocess.py:93} INFO -   Sensor 4957: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.754+0000] {subprocess.py:93} INFO - Processing sensor 407/632 (sensor_id=1304615)
+[2025-12-16T23:37:17.754+0000] {subprocess.py:93} INFO -   Sensor 1304615: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.754+0000] {subprocess.py:93} INFO -   Sensor 1304615: fetched page 2 with 46 hourly records.
+[2025-12-16T23:37:17.754+0000] {subprocess.py:93} INFO - Processing sensor 408/632 (sensor_id=242)
+[2025-12-16T23:37:17.754+0000] {subprocess.py:93} INFO -   Sensor 242: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.754+0000] {subprocess.py:93} INFO -   Sensor 242: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO - Processing sensor 409/632 (sensor_id=247)
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO -   Sensor 247: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO -   Sensor 247: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO - Processing sensor 410/632 (sensor_id=248)
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO -   Sensor 248: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO -   Sensor 248: fetched page 2 with 63 hourly records.
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO - Processing sensor 411/632 (sensor_id=249)
+[2025-12-16T23:37:17.755+0000] {subprocess.py:93} INFO -   Sensor 249: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.756+0000] {subprocess.py:93} INFO -   Sensor 249: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.756+0000] {subprocess.py:93} INFO - Processing sensor 412/632 (sensor_id=4961)
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO -   Sensor 4961: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO -   Sensor 4961: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO - Processing sensor 413/632 (sensor_id=250)
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO - Processing sensor 414/632 (sensor_id=252)
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO - Rate limited for sensor 252, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO - Rate limited for sensor 252, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO - Processing sensor 415/632 (sensor_id=255)
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO -   Sensor 255: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO -   Sensor 255: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO - Processing sensor 416/632 (sensor_id=1304510)
+[2025-12-16T23:37:17.757+0000] {subprocess.py:93} INFO -   Sensor 1304510: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.758+0000] {subprocess.py:93} INFO -   Sensor 1304510: fetched page 2 with 64 hourly records.
+[2025-12-16T23:37:17.758+0000] {subprocess.py:93} INFO - Processing sensor 417/632 (sensor_id=28911)
+[2025-12-16T23:37:17.758+0000] {subprocess.py:93} INFO -   Sensor 28911: fetched page 1 with 100 hourly records.
+[2025-12-16T23:37:17.758+0000] {subprocess.py:93} INFO -   Sensor 28911: fetched page 2 with 67 hourly records.
+[2025-12-16T23:37:17.758+0000] {subprocess.py:93} INFO - Processing sensor 418/632 (sensor_id=254)
+[2025-12-16T23:42:23.149+0000] {subprocess.py:93} INFO -   Sensor 254: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.153+0000] {subprocess.py:93} INFO -   Sensor 254: fetched page 2 with 67 hourly records.
+[2025-12-16T23:42:23.153+0000] {subprocess.py:93} INFO - Processing sensor 419/632 (sensor_id=1304502)
+[2025-12-16T23:42:23.154+0000] {subprocess.py:93} INFO -   Sensor 1304502: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.154+0000] {subprocess.py:93} INFO -   Sensor 1304502: fetched page 2 with 17 hourly records.
+[2025-12-16T23:42:23.155+0000] {subprocess.py:93} INFO - Processing sensor 420/632 (sensor_id=28891)
+[2025-12-16T23:42:23.155+0000] {subprocess.py:93} INFO -   Sensor 28891: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.155+0000] {subprocess.py:93} INFO -   Sensor 28891: fetched page 2 with 67 hourly records.
+[2025-12-16T23:42:23.155+0000] {subprocess.py:93} INFO - Processing sensor 421/632 (sensor_id=257)
+[2025-12-16T23:42:23.156+0000] {subprocess.py:93} INFO -   Sensor 257: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.156+0000] {subprocess.py:93} INFO -   Sensor 257: fetched page 2 with 63 hourly records.
+[2025-12-16T23:42:23.157+0000] {subprocess.py:93} INFO - Processing sensor 422/632 (sensor_id=258)
+[2025-12-16T23:42:23.158+0000] {subprocess.py:93} INFO -   Sensor 258: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.158+0000] {subprocess.py:93} INFO -   Sensor 258: fetched page 2 with 67 hourly records.
+[2025-12-16T23:42:23.158+0000] {subprocess.py:93} INFO - Processing sensor 423/632 (sensor_id=3327179)
+[2025-12-16T23:42:23.159+0000] {subprocess.py:93} INFO -   Sensor 3327179: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.159+0000] {subprocess.py:93} INFO -   Sensor 3327179: fetched page 2 with 63 hourly records.
+[2025-12-16T23:42:23.159+0000] {subprocess.py:93} INFO - Processing sensor 424/632 (sensor_id=28890)
+[2025-12-16T23:42:23.159+0000] {subprocess.py:93} INFO -   Sensor 28890: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.160+0000] {subprocess.py:93} INFO -   Sensor 28890: fetched page 2 with 26 hourly records.
+[2025-12-16T23:42:23.160+0000] {subprocess.py:93} INFO - Rate limited for sensor 28890, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:42:23.160+0000] {subprocess.py:93} INFO - Rate limited for sensor 28890, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:42:23.160+0000] {subprocess.py:93} INFO - Processing sensor 425/632 (sensor_id=262)
+[2025-12-16T23:42:23.160+0000] {subprocess.py:93} INFO - Processing sensor 426/632 (sensor_id=264)
+[2025-12-16T23:42:23.161+0000] {subprocess.py:93} INFO - Processing sensor 427/632 (sensor_id=266)
+[2025-12-16T23:42:23.161+0000] {subprocess.py:93} INFO - Processing sensor 428/632 (sensor_id=265)
+[2025-12-16T23:42:23.161+0000] {subprocess.py:93} INFO - Processing sensor 429/632 (sensor_id=263)
+[2025-12-16T23:42:23.161+0000] {subprocess.py:93} INFO - Processing sensor 430/632 (sensor_id=267)
+[2025-12-16T23:42:23.161+0000] {subprocess.py:93} INFO - Processing sensor 431/632 (sensor_id=330)
+[2025-12-16T23:42:23.162+0000] {subprocess.py:93} INFO - Processing sensor 432/632 (sensor_id=329)
+[2025-12-16T23:42:23.162+0000] {subprocess.py:93} INFO - Processing sensor 433/632 (sensor_id=328)
+[2025-12-16T23:42:23.162+0000] {subprocess.py:93} INFO - Processing sensor 434/632 (sensor_id=273)
+[2025-12-16T23:42:23.163+0000] {subprocess.py:93} INFO - Processing sensor 435/632 (sensor_id=334)
+[2025-12-16T23:42:23.163+0000] {subprocess.py:93} INFO - Processing sensor 436/632 (sensor_id=332)
+[2025-12-16T23:42:23.163+0000] {subprocess.py:93} INFO -   Sensor 332: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.163+0000] {subprocess.py:93} INFO -   Sensor 332: fetched page 2 with 63 hourly records.
+[2025-12-16T23:42:23.164+0000] {subprocess.py:93} INFO - Processing sensor 437/632 (sensor_id=271)
+[2025-12-16T23:42:23.164+0000] {subprocess.py:93} INFO - Processing sensor 438/632 (sensor_id=268)
+[2025-12-16T23:42:23.164+0000] {subprocess.py:93} INFO - Processing sensor 439/632 (sensor_id=308)
+[2025-12-16T23:42:23.164+0000] {subprocess.py:93} INFO - Processing sensor 440/632 (sensor_id=272)
+[2025-12-16T23:42:23.165+0000] {subprocess.py:93} INFO - Processing sensor 441/632 (sensor_id=269)
+[2025-12-16T23:42:23.165+0000] {subprocess.py:93} INFO - Processing sensor 442/632 (sensor_id=270)
+[2025-12-16T23:42:23.165+0000] {subprocess.py:93} INFO - Processing sensor 443/632 (sensor_id=288)
+[2025-12-16T23:42:23.165+0000] {subprocess.py:93} INFO - Processing sensor 444/632 (sensor_id=2071327)
+[2025-12-16T23:42:23.165+0000] {subprocess.py:93} INFO -   Sensor 2071327: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.165+0000] {subprocess.py:93} INFO -   Sensor 2071327: fetched page 2 with 45 hourly records.
+[2025-12-16T23:42:23.166+0000] {subprocess.py:93} INFO - Processing sensor 445/632 (sensor_id=275)
+[2025-12-16T23:42:23.166+0000] {subprocess.py:93} INFO - Processing sensor 446/632 (sensor_id=274)
+[2025-12-16T23:42:23.166+0000] {subprocess.py:93} INFO - Processing sensor 447/632 (sensor_id=277)
+[2025-12-16T23:42:23.166+0000] {subprocess.py:93} INFO - Processing sensor 448/632 (sensor_id=276)
+[2025-12-16T23:42:23.166+0000] {subprocess.py:93} INFO - Processing sensor 449/632 (sensor_id=279)
+[2025-12-16T23:42:23.166+0000] {subprocess.py:93} INFO - Processing sensor 450/632 (sensor_id=278)
+[2025-12-16T23:42:23.167+0000] {subprocess.py:93} INFO - Rate limited for sensor 278, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:42:23.167+0000] {subprocess.py:93} INFO - Rate limited for sensor 278, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:42:23.167+0000] {subprocess.py:93} INFO - Rate limited for sensor 278, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:42:23.167+0000] {subprocess.py:93} INFO - Processing sensor 451/632 (sensor_id=303)
+[2025-12-16T23:42:23.167+0000] {subprocess.py:93} INFO - Rate limited for sensor 303, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:42:23.167+0000] {subprocess.py:93} INFO - Rate limited for sensor 303, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:42:23.168+0000] {subprocess.py:93} INFO - Processing sensor 452/632 (sensor_id=280)
+[2025-12-16T23:42:23.168+0000] {subprocess.py:93} INFO - Processing sensor 453/632 (sensor_id=281)
+[2025-12-16T23:42:23.168+0000] {subprocess.py:93} INFO - Processing sensor 454/632 (sensor_id=286)
+[2025-12-16T23:42:23.168+0000] {subprocess.py:93} INFO - Processing sensor 455/632 (sensor_id=282)
+[2025-12-16T23:42:23.168+0000] {subprocess.py:93} INFO - Processing sensor 456/632 (sensor_id=293)
+[2025-12-16T23:42:23.168+0000] {subprocess.py:93} INFO - Processing sensor 457/632 (sensor_id=283)
+[2025-12-16T23:42:23.169+0000] {subprocess.py:93} INFO - Processing sensor 458/632 (sensor_id=285)
+[2025-12-16T23:42:23.169+0000] {subprocess.py:93} INFO - Processing sensor 459/632 (sensor_id=284)
+[2025-12-16T23:42:23.169+0000] {subprocess.py:93} INFO - Processing sensor 460/632 (sensor_id=287)
+[2025-12-16T23:42:23.169+0000] {subprocess.py:93} INFO -   Sensor 287: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.169+0000] {subprocess.py:93} INFO -   Sensor 287: fetched page 2 with 61 hourly records.
+[2025-12-16T23:42:23.169+0000] {subprocess.py:93} INFO - Processing sensor 461/632 (sensor_id=2071333)
+[2025-12-16T23:42:23.170+0000] {subprocess.py:93} INFO -   Sensor 2071333: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.170+0000] {subprocess.py:93} INFO -   Sensor 2071333: fetched page 2 with 45 hourly records.
+[2025-12-16T23:42:23.170+0000] {subprocess.py:93} INFO - Processing sensor 462/632 (sensor_id=291)
+[2025-12-16T23:42:23.170+0000] {subprocess.py:93} INFO - Processing sensor 463/632 (sensor_id=289)
+[2025-12-16T23:42:23.170+0000] {subprocess.py:93} INFO - Processing sensor 464/632 (sensor_id=290)
+[2025-12-16T23:42:23.170+0000] {subprocess.py:93} INFO - Processing sensor 465/632 (sensor_id=292)
+[2025-12-16T23:42:23.171+0000] {subprocess.py:93} INFO - Processing sensor 466/632 (sensor_id=294)
+[2025-12-16T23:42:23.171+0000] {subprocess.py:93} INFO - Processing sensor 467/632 (sensor_id=295)
+[2025-12-16T23:42:23.171+0000] {subprocess.py:93} INFO - Processing sensor 468/632 (sensor_id=296)
+[2025-12-16T23:42:23.171+0000] {subprocess.py:93} INFO - Processing sensor 469/632 (sensor_id=297)
+[2025-12-16T23:42:23.171+0000] {subprocess.py:93} INFO - Processing sensor 470/632 (sensor_id=298)
+[2025-12-16T23:42:23.171+0000] {subprocess.py:93} INFO - Processing sensor 471/632 (sensor_id=300)
+[2025-12-16T23:42:23.172+0000] {subprocess.py:93} INFO - Processing sensor 472/632 (sensor_id=299)
+[2025-12-16T23:42:23.172+0000] {subprocess.py:93} INFO - Processing sensor 473/632 (sensor_id=301)
+[2025-12-16T23:42:23.172+0000] {subprocess.py:93} INFO - Processing sensor 474/632 (sensor_id=305)
+[2025-12-16T23:42:23.172+0000] {subprocess.py:93} INFO - Processing sensor 475/632 (sensor_id=333)
+[2025-12-16T23:42:23.172+0000] {subprocess.py:93} INFO - Processing sensor 476/632 (sensor_id=306)
+[2025-12-16T23:42:23.172+0000] {subprocess.py:93} INFO - Processing sensor 477/632 (sensor_id=309)
+[2025-12-16T23:42:23.172+0000] {subprocess.py:93} INFO - Rate limited for sensor 309, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:42:23.173+0000] {subprocess.py:93} INFO - Rate limited for sensor 309, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:42:23.173+0000] {subprocess.py:93} INFO - Rate limited for sensor 309, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:42:23.173+0000] {subprocess.py:93} INFO - Processing sensor 478/632 (sensor_id=310)
+[2025-12-16T23:42:23.173+0000] {subprocess.py:93} INFO -   Sensor 310: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.173+0000] {subprocess.py:93} INFO -   Sensor 310: fetched page 2 with 64 hourly records.
+[2025-12-16T23:42:23.173+0000] {subprocess.py:93} INFO - Processing sensor 479/632 (sensor_id=2031)
+[2025-12-16T23:42:23.173+0000] {subprocess.py:93} INFO -   Sensor 2031: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.174+0000] {subprocess.py:93} INFO -   Sensor 2031: fetched page 2 with 44 hourly records.
+[2025-12-16T23:42:23.174+0000] {subprocess.py:93} INFO - Processing sensor 480/632 (sensor_id=327)
+[2025-12-16T23:42:23.174+0000] {subprocess.py:93} INFO - Processing sensor 481/632 (sensor_id=311)
+[2025-12-16T23:42:23.174+0000] {subprocess.py:93} INFO -   Sensor 311: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.174+0000] {subprocess.py:93} INFO -   Sensor 311: fetched page 2 with 64 hourly records.
+[2025-12-16T23:42:23.174+0000] {subprocess.py:93} INFO - Processing sensor 482/632 (sensor_id=2071339)
+[2025-12-16T23:42:23.174+0000] {subprocess.py:93} INFO -   Sensor 2071339: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.175+0000] {subprocess.py:93} INFO -   Sensor 2071339: fetched page 2 with 45 hourly records.
+[2025-12-16T23:42:23.175+0000] {subprocess.py:93} INFO - Processing sensor 483/632 (sensor_id=312)
+[2025-12-16T23:42:23.175+0000] {subprocess.py:93} INFO -   Sensor 312: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.175+0000] {subprocess.py:93} INFO -   Sensor 312: fetched page 2 with 64 hourly records.
+[2025-12-16T23:42:23.175+0000] {subprocess.py:93} INFO - Processing sensor 484/632 (sensor_id=313)
+[2025-12-16T23:42:23.175+0000] {subprocess.py:93} INFO - Processing sensor 485/632 (sensor_id=314)
+[2025-12-16T23:42:23.175+0000] {subprocess.py:93} INFO - Processing sensor 486/632 (sensor_id=315)
+[2025-12-16T23:42:23.176+0000] {subprocess.py:93} INFO - Processing sensor 487/632 (sensor_id=5077791)
+[2025-12-16T23:42:23.176+0000] {subprocess.py:93} INFO -   Sensor 5077791: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.176+0000] {subprocess.py:93} INFO -   Sensor 5077791: fetched page 2 with 62 hourly records.
+[2025-12-16T23:42:23.176+0000] {subprocess.py:93} INFO - Processing sensor 488/632 (sensor_id=5077638)
+[2025-12-16T23:42:23.176+0000] {subprocess.py:93} INFO -   Sensor 5077638: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.176+0000] {subprocess.py:93} INFO -   Sensor 5077638: fetched page 2 with 45 hourly records.
+[2025-12-16T23:42:23.176+0000] {subprocess.py:93} INFO - Processing sensor 489/632 (sensor_id=318)
+[2025-12-16T23:42:23.177+0000] {subprocess.py:93} INFO - Processing sensor 490/632 (sensor_id=319)
+[2025-12-16T23:42:23.177+0000] {subprocess.py:93} INFO -   Sensor 319: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.177+0000] {subprocess.py:93} INFO -   Sensor 319: fetched page 2 with 62 hourly records.
+[2025-12-16T23:42:23.177+0000] {subprocess.py:93} INFO - Processing sensor 491/632 (sensor_id=320)
+[2025-12-16T23:42:23.177+0000] {subprocess.py:93} INFO -   Sensor 320: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.177+0000] {subprocess.py:93} INFO - Rate limited for sensor 320, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:42:23.177+0000] {subprocess.py:93} INFO - Rate limited for sensor 320, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:42:23.178+0000] {subprocess.py:93} INFO - Rate limited for sensor 320, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:42:23.178+0000] {subprocess.py:93} INFO - Processing sensor 492/632 (sensor_id=321)
+[2025-12-16T23:42:23.178+0000] {subprocess.py:93} INFO - Processing sensor 493/632 (sensor_id=322)
+[2025-12-16T23:42:23.178+0000] {subprocess.py:93} INFO - Processing sensor 494/632 (sensor_id=323)
+[2025-12-16T23:42:23.178+0000] {subprocess.py:93} INFO - Processing sensor 495/632 (sensor_id=324)
+[2025-12-16T23:42:23.179+0000] {subprocess.py:93} INFO - Processing sensor 496/632 (sensor_id=325)
+[2025-12-16T23:42:23.179+0000] {subprocess.py:93} INFO -   Sensor 325: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.179+0000] {subprocess.py:93} INFO -   Sensor 325: fetched page 2 with 64 hourly records.
+[2025-12-16T23:42:23.179+0000] {subprocess.py:93} INFO - Processing sensor 497/632 (sensor_id=453)
+[2025-12-16T23:42:23.179+0000] {subprocess.py:93} INFO - Processing sensor 498/632 (sensor_id=326)
+[2025-12-16T23:42:23.179+0000] {subprocess.py:93} INFO - Processing sensor 499/632 (sensor_id=331)
+[2025-12-16T23:42:23.179+0000] {subprocess.py:93} INFO - Processing sensor 500/632 (sensor_id=335)
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO - Processing sensor 501/632 (sensor_id=336)
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO - Processing sensor 502/632 (sensor_id=339)
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO -   Sensor 339: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO -   Sensor 339: fetched page 2 with 65 hourly records.
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO - Processing sensor 503/632 (sensor_id=337)
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO - Processing sensor 504/632 (sensor_id=340)
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO - Processing sensor 505/632 (sensor_id=342)
+[2025-12-16T23:42:23.180+0000] {subprocess.py:93} INFO - Processing sensor 506/632 (sensor_id=343)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 507/632 (sensor_id=344)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 508/632 (sensor_id=346)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 509/632 (sensor_id=345)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 510/632 (sensor_id=347)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 511/632 (sensor_id=348)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 512/632 (sensor_id=349)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 513/632 (sensor_id=350)
+[2025-12-16T23:42:23.181+0000] {subprocess.py:93} INFO - Processing sensor 514/632 (sensor_id=352)
+[2025-12-16T23:42:23.182+0000] {subprocess.py:93} INFO - Processing sensor 515/632 (sensor_id=20354)
+[2025-12-16T23:42:23.182+0000] {subprocess.py:93} INFO - Processing sensor 516/632 (sensor_id=353)
+[2025-12-16T23:42:23.182+0000] {subprocess.py:93} INFO - Processing sensor 517/632 (sensor_id=720)
+[2025-12-16T23:42:23.182+0000] {subprocess.py:93} INFO -   Sensor 720: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.182+0000] {subprocess.py:93} INFO - Rate limited for sensor 720, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:42:23.182+0000] {subprocess.py:93} INFO - Rate limited for sensor 720, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:42:23.182+0000] {subprocess.py:93} INFO - Rate limited for sensor 720, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:42:23.183+0000] {subprocess.py:93} INFO - Processing sensor 518/632 (sensor_id=726)
+[2025-12-16T23:42:23.183+0000] {subprocess.py:93} INFO -   Sensor 726: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.183+0000] {subprocess.py:93} INFO -   Sensor 726: fetched page 2 with 52 hourly records.
+[2025-12-16T23:42:23.183+0000] {subprocess.py:93} INFO - Processing sensor 519/632 (sensor_id=22463)
+[2025-12-16T23:42:23.183+0000] {subprocess.py:93} INFO -   Sensor 22463: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.183+0000] {subprocess.py:93} INFO -   Sensor 22463: fetched page 2 with 63 hourly records.
+[2025-12-16T23:42:23.183+0000] {subprocess.py:93} INFO - Processing sensor 520/632 (sensor_id=354)
+[2025-12-16T23:42:23.184+0000] {subprocess.py:93} INFO - Processing sensor 521/632 (sensor_id=4274228)
+[2025-12-16T23:42:23.184+0000] {subprocess.py:93} INFO -   Sensor 4274228: fetched page 1 with 100 hourly records.
+[2025-12-16T23:42:23.184+0000] {subprocess.py:93} INFO -   Sensor 4274228: fetched page 2 with 64 hourly records.
+[2025-12-16T23:42:23.184+0000] {subprocess.py:93} INFO - Processing sensor 522/632 (sensor_id=25559)
+[2025-12-16T23:42:23.184+0000] {subprocess.py:93} INFO -   Sensor 25559: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.472+0000] {subprocess.py:93} INFO -   Sensor 25559: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.477+0000] {subprocess.py:93} INFO - Processing sensor 523/632 (sensor_id=4274236)
+[2025-12-16T23:47:19.477+0000] {subprocess.py:93} INFO -   Sensor 4274236: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.478+0000] {subprocess.py:93} INFO -   Sensor 4274236: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.478+0000] {subprocess.py:93} INFO - Processing sensor 524/632 (sensor_id=3996)
+[2025-12-16T23:47:19.478+0000] {subprocess.py:93} INFO - Processing sensor 525/632 (sensor_id=355)
+[2025-12-16T23:47:19.478+0000] {subprocess.py:93} INFO - Processing sensor 526/632 (sensor_id=3995)
+[2025-12-16T23:47:19.479+0000] {subprocess.py:93} INFO -   Sensor 3995: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.479+0000] {subprocess.py:93} INFO -   Sensor 3995: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.479+0000] {subprocess.py:93} INFO - Processing sensor 527/632 (sensor_id=356)
+[2025-12-16T23:47:19.480+0000] {subprocess.py:93} INFO -   Sensor 356: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.480+0000] {subprocess.py:93} INFO -   Sensor 356: fetched page 2 with 65 hourly records.
+[2025-12-16T23:47:19.481+0000] {subprocess.py:93} INFO - Processing sensor 528/632 (sensor_id=357)
+[2025-12-16T23:47:19.481+0000] {subprocess.py:93} INFO - Processing sensor 529/632 (sensor_id=358)
+[2025-12-16T23:47:19.481+0000] {subprocess.py:93} INFO -   Sensor 358: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.481+0000] {subprocess.py:93} INFO -   Sensor 358: fetched page 2 with 58 hourly records.
+[2025-12-16T23:47:19.482+0000] {subprocess.py:93} INFO - Processing sensor 530/632 (sensor_id=3314)
+[2025-12-16T23:47:19.482+0000] {subprocess.py:93} INFO -   Sensor 3314: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.482+0000] {subprocess.py:93} INFO -   Sensor 3314: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.482+0000] {subprocess.py:93} INFO - Rate limited for sensor 3314, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:47:19.482+0000] {subprocess.py:93} INFO - Rate limited for sensor 3314, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:47:19.483+0000] {subprocess.py:93} INFO - Processing sensor 531/632 (sensor_id=1217)
+[2025-12-16T23:47:19.483+0000] {subprocess.py:93} INFO -   Sensor 1217: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.483+0000] {subprocess.py:93} INFO -   Sensor 1217: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.483+0000] {subprocess.py:93} INFO - Processing sensor 532/632 (sensor_id=359)
+[2025-12-16T23:47:19.484+0000] {subprocess.py:93} INFO -   Sensor 359: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.484+0000] {subprocess.py:93} INFO -   Sensor 359: fetched page 2 with 68 hourly records.
+[2025-12-16T23:47:19.484+0000] {subprocess.py:93} INFO - Processing sensor 533/632 (sensor_id=360)
+[2025-12-16T23:47:19.484+0000] {subprocess.py:93} INFO -   Sensor 360: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.484+0000] {subprocess.py:93} INFO -   Sensor 360: fetched page 2 with 45 hourly records.
+[2025-12-16T23:47:19.484+0000] {subprocess.py:93} INFO - Processing sensor 534/632 (sensor_id=3886)
+[2025-12-16T23:47:19.484+0000] {subprocess.py:93} INFO -   Sensor 3886: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.485+0000] {subprocess.py:93} INFO -   Sensor 3886: fetched page 2 with 66 hourly records.
+[2025-12-16T23:47:19.485+0000] {subprocess.py:93} INFO - Processing sensor 535/632 (sensor_id=361)
+[2025-12-16T23:47:19.485+0000] {subprocess.py:93} INFO -   Sensor 361: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.485+0000] {subprocess.py:93} INFO -   Sensor 361: fetched page 2 with 45 hourly records.
+[2025-12-16T23:47:19.485+0000] {subprocess.py:93} INFO - Processing sensor 536/632 (sensor_id=362)
+[2025-12-16T23:47:19.486+0000] {subprocess.py:93} INFO -   Sensor 362: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.486+0000] {subprocess.py:93} INFO -   Sensor 362: fetched page 2 with 45 hourly records.
+[2025-12-16T23:47:19.486+0000] {subprocess.py:93} INFO - Processing sensor 537/632 (sensor_id=531)
+[2025-12-16T23:47:19.486+0000] {subprocess.py:93} INFO - Processing sensor 538/632 (sensor_id=363)
+[2025-12-16T23:47:19.487+0000] {subprocess.py:93} INFO -   Sensor 363: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.487+0000] {subprocess.py:93} INFO -   Sensor 363: fetched page 2 with 68 hourly records.
+[2025-12-16T23:47:19.487+0000] {subprocess.py:93} INFO - Processing sensor 539/632 (sensor_id=533)
+[2025-12-16T23:47:19.487+0000] {subprocess.py:93} INFO - Processing sensor 540/632 (sensor_id=5077870)
+[2025-12-16T23:47:19.487+0000] {subprocess.py:93} INFO -   Sensor 5077870: fetched page 1 with 88 hourly records.
+[2025-12-16T23:47:19.487+0000] {subprocess.py:93} INFO - Processing sensor 541/632 (sensor_id=5077612)
+[2025-12-16T23:47:19.488+0000] {subprocess.py:93} INFO -   Sensor 5077612: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.488+0000] {subprocess.py:93} INFO -   Sensor 5077612: fetched page 2 with 67 hourly records.
+[2025-12-16T23:47:19.488+0000] {subprocess.py:93} INFO - Processing sensor 542/632 (sensor_id=5077534)
+[2025-12-16T23:47:19.488+0000] {subprocess.py:93} INFO -   Sensor 5077534: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.488+0000] {subprocess.py:93} INFO - Rate limited for sensor 5077534, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:47:19.488+0000] {subprocess.py:93} INFO - Rate limited for sensor 5077534, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:47:19.489+0000] {subprocess.py:93} INFO - Rate limited for sensor 5077534, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:47:19.489+0000] {subprocess.py:93} INFO - Processing sensor 543/632 (sensor_id=5077715)
+[2025-12-16T23:47:19.489+0000] {subprocess.py:93} INFO -   Sensor 5077715: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.489+0000] {subprocess.py:93} INFO -   Sensor 5077715: fetched page 2 with 68 hourly records.
+[2025-12-16T23:47:19.489+0000] {subprocess.py:93} INFO - Processing sensor 544/632 (sensor_id=5077753)
+[2025-12-16T23:47:19.490+0000] {subprocess.py:93} INFO -   Sensor 5077753: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.490+0000] {subprocess.py:93} INFO -   Sensor 5077753: fetched page 2 with 68 hourly records.
+[2025-12-16T23:47:19.490+0000] {subprocess.py:93} INFO - Processing sensor 545/632 (sensor_id=5077595)
+[2025-12-16T23:47:19.490+0000] {subprocess.py:93} INFO -   Sensor 5077595: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.491+0000] {subprocess.py:93} INFO -   Sensor 5077595: fetched page 2 with 60 hourly records.
+[2025-12-16T23:47:19.491+0000] {subprocess.py:93} INFO - Processing sensor 546/632 (sensor_id=2992)
+[2025-12-16T23:47:19.491+0000] {subprocess.py:93} INFO -   Sensor 2992: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.491+0000] {subprocess.py:93} INFO -   Sensor 2992: fetched page 2 with 67 hourly records.
+[2025-12-16T23:47:19.491+0000] {subprocess.py:93} INFO - Processing sensor 547/632 (sensor_id=365)
+[2025-12-16T23:47:19.492+0000] {subprocess.py:93} INFO -   Sensor 365: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.492+0000] {subprocess.py:93} INFO -   Sensor 365: fetched page 2 with 45 hourly records.
+[2025-12-16T23:47:19.492+0000] {subprocess.py:93} INFO - Processing sensor 548/632 (sensor_id=2991)
+[2025-12-16T23:47:19.492+0000] {subprocess.py:93} INFO -   Sensor 2991: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.492+0000] {subprocess.py:93} INFO -   Sensor 2991: fetched page 2 with 67 hourly records.
+[2025-12-16T23:47:19.492+0000] {subprocess.py:93} INFO - Processing sensor 549/632 (sensor_id=2180)
+[2025-12-16T23:47:19.493+0000] {subprocess.py:93} INFO - Processing sensor 550/632 (sensor_id=2183)
+[2025-12-16T23:47:19.493+0000] {subprocess.py:93} INFO -   Sensor 2183: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.493+0000] {subprocess.py:93} INFO -   Sensor 2183: fetched page 2 with 66 hourly records.
+[2025-12-16T23:47:19.493+0000] {subprocess.py:93} INFO - Processing sensor 551/632 (sensor_id=2182)
+[2025-12-16T23:47:19.493+0000] {subprocess.py:93} INFO -   Sensor 2182: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.493+0000] {subprocess.py:93} INFO -   Sensor 2182: fetched page 2 with 66 hourly records.
+[2025-12-16T23:47:19.494+0000] {subprocess.py:93} INFO - Processing sensor 552/632 (sensor_id=2179)
+[2025-12-16T23:47:19.494+0000] {subprocess.py:93} INFO - Processing sensor 553/632 (sensor_id=366)
+[2025-12-16T23:47:19.494+0000] {subprocess.py:93} INFO -   Sensor 366: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.494+0000] {subprocess.py:93} INFO -   Sensor 366: fetched page 2 with 42 hourly records.
+[2025-12-16T23:47:19.494+0000] {subprocess.py:93} INFO - Processing sensor 554/632 (sensor_id=2181)
+[2025-12-16T23:47:19.495+0000] {subprocess.py:93} INFO -   Sensor 2181: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.495+0000] {subprocess.py:93} INFO - Rate limited for sensor 2181, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:47:19.495+0000] {subprocess.py:93} INFO -   Sensor 2181: fetched page 2 with 65 hourly records.
+[2025-12-16T23:47:19.495+0000] {subprocess.py:93} INFO - Processing sensor 555/632 (sensor_id=2454)
+[2025-12-16T23:47:19.495+0000] {subprocess.py:93} INFO - Processing sensor 556/632 (sensor_id=367)
+[2025-12-16T23:47:19.495+0000] {subprocess.py:93} INFO - Processing sensor 557/632 (sensor_id=3618)
+[2025-12-16T23:47:19.496+0000] {subprocess.py:93} INFO - Processing sensor 558/632 (sensor_id=368)
+[2025-12-16T23:47:19.496+0000] {subprocess.py:93} INFO - Processing sensor 559/632 (sensor_id=3619)
+[2025-12-16T23:47:19.496+0000] {subprocess.py:93} INFO - Processing sensor 560/632 (sensor_id=3942)
+[2025-12-16T23:47:19.496+0000] {subprocess.py:93} INFO - Processing sensor 561/632 (sensor_id=369)
+[2025-12-16T23:47:19.496+0000] {subprocess.py:93} INFO -   Sensor 369: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.497+0000] {subprocess.py:93} INFO -   Sensor 369: fetched page 2 with 68 hourly records.
+[2025-12-16T23:47:19.497+0000] {subprocess.py:93} INFO - Processing sensor 562/632 (sensor_id=21566)
+[2025-12-16T23:47:19.497+0000] {subprocess.py:93} INFO -   Sensor 21566: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.497+0000] {subprocess.py:93} INFO -   Sensor 21566: fetched page 2 with 67 hourly records.
+[2025-12-16T23:47:19.497+0000] {subprocess.py:93} INFO - Processing sensor 563/632 (sensor_id=371)
+[2025-12-16T23:47:19.497+0000] {subprocess.py:93} INFO -   Sensor 371: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.497+0000] {subprocess.py:93} INFO -   Sensor 371: fetched page 2 with 7 hourly records.
+[2025-12-16T23:47:19.498+0000] {subprocess.py:93} INFO - Processing sensor 564/632 (sensor_id=372)
+[2025-12-16T23:47:19.498+0000] {subprocess.py:93} INFO -   Sensor 372: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.498+0000] {subprocess.py:93} INFO -   Sensor 372: fetched page 2 with 43 hourly records.
+[2025-12-16T23:47:19.498+0000] {subprocess.py:93} INFO - Processing sensor 565/632 (sensor_id=373)
+[2025-12-16T23:47:19.498+0000] {subprocess.py:93} INFO -   Sensor 373: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.498+0000] {subprocess.py:93} INFO -   Sensor 373: fetched page 2 with 60 hourly records.
+[2025-12-16T23:47:19.498+0000] {subprocess.py:93} INFO - Processing sensor 566/632 (sensor_id=2637)
+[2025-12-16T23:47:19.499+0000] {subprocess.py:93} INFO -   Sensor 2637: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.499+0000] {subprocess.py:93} INFO -   Sensor 2637: fetched page 2 with 40 hourly records.
+[2025-12-16T23:47:19.499+0000] {subprocess.py:93} INFO - Processing sensor 567/632 (sensor_id=374)
+[2025-12-16T23:47:19.499+0000] {subprocess.py:93} INFO -   Sensor 374: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.499+0000] {subprocess.py:93} INFO -   Sensor 374: fetched page 2 with 67 hourly records.
+[2025-12-16T23:47:19.499+0000] {subprocess.py:93} INFO - Processing sensor 568/632 (sensor_id=7941720)
+[2025-12-16T23:47:19.499+0000] {subprocess.py:93} INFO - Processing sensor 569/632 (sensor_id=375)
+[2025-12-16T23:47:19.500+0000] {subprocess.py:93} INFO - Rate limited for sensor 375, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:47:19.500+0000] {subprocess.py:93} INFO - Rate limited for sensor 375, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:47:19.500+0000] {subprocess.py:93} INFO - Rate limited for sensor 375, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:47:19.500+0000] {subprocess.py:93} INFO - Processing sensor 570/632 (sensor_id=2898)
+[2025-12-16T23:47:19.500+0000] {subprocess.py:93} INFO -   Sensor 2898: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.500+0000] {subprocess.py:93} INFO -   Sensor 2898: fetched page 2 with 53 hourly records.
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO - Processing sensor 571/632 (sensor_id=376)
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO -   Sensor 376: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO -   Sensor 376: fetched page 2 with 66 hourly records.
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO - Processing sensor 572/632 (sensor_id=1294003)
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO -   Sensor 1294003: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO -   Sensor 1294003: fetched page 2 with 45 hourly records.
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO - Processing sensor 573/632 (sensor_id=377)
+[2025-12-16T23:47:19.501+0000] {subprocess.py:93} INFO -   Sensor 377: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO -   Sensor 377: fetched page 2 with 45 hourly records.
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO - Processing sensor 574/632 (sensor_id=379)
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO -   Sensor 379: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO -   Sensor 379: fetched page 2 with 65 hourly records.
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO - Processing sensor 575/632 (sensor_id=385)
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO - Processing sensor 576/632 (sensor_id=12235605)
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO -   Sensor 12235605: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.502+0000] {subprocess.py:93} INFO -   Sensor 12235605: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO - Processing sensor 577/632 (sensor_id=12235606)
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO -   Sensor 12235606: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO -   Sensor 12235606: fetched page 2 with 52 hourly records.
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO - Processing sensor 578/632 (sensor_id=12235607)
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO -   Sensor 12235607: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO -   Sensor 12235607: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO - Processing sensor 579/632 (sensor_id=382)
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO - Processing sensor 580/632 (sensor_id=14340864)
+[2025-12-16T23:47:19.503+0000] {subprocess.py:93} INFO -   Sensor 14340864: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO -   Sensor 14340864: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO - Processing sensor 581/632 (sensor_id=12235608)
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO -   Sensor 12235608: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO - Rate limited for sensor 12235608, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO - Rate limited for sensor 12235608, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO -   Sensor 12235608: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO - Processing sensor 582/632 (sensor_id=380)
+[2025-12-16T23:47:19.504+0000] {subprocess.py:93} INFO - Processing sensor 583/632 (sensor_id=12235609)
+[2025-12-16T23:47:19.505+0000] {subprocess.py:93} INFO -   Sensor 12235609: fetched page 1 with 100 hourly records.
+[2025-12-16T23:47:19.505+0000] {subprocess.py:93} INFO -   Sensor 12235609: fetched page 2 with 64 hourly records.
+[2025-12-16T23:47:19.505+0000] {subprocess.py:93} INFO - Processing sensor 584/632 (sensor_id=381)
+[2025-12-16T23:47:19.505+0000] {subprocess.py:93} INFO - Processing sensor 585/632 (sensor_id=384)
+[2025-12-16T23:47:19.505+0000] {subprocess.py:93} INFO - Processing sensor 586/632 (sensor_id=12235610)
+[2025-12-16T23:47:19.505+0000] {subprocess.py:93} INFO -   Sensor 12235610: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.303+0000] {subprocess.py:93} INFO -   Sensor 12235610: fetched page 2 with 64 hourly records.
+[2025-12-16T23:49:29.308+0000] {subprocess.py:93} INFO - Processing sensor 587/632 (sensor_id=12235611)
+[2025-12-16T23:49:29.308+0000] {subprocess.py:93} INFO -   Sensor 12235611: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.308+0000] {subprocess.py:93} INFO -   Sensor 12235611: fetched page 2 with 64 hourly records.
+[2025-12-16T23:49:29.309+0000] {subprocess.py:93} INFO - Processing sensor 588/632 (sensor_id=383)
+[2025-12-16T23:49:29.309+0000] {subprocess.py:93} INFO - Processing sensor 589/632 (sensor_id=12235612)
+[2025-12-16T23:49:29.310+0000] {subprocess.py:93} INFO -   Sensor 12235612: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.310+0000] {subprocess.py:93} INFO -   Sensor 12235612: fetched page 2 with 53 hourly records.
+[2025-12-16T23:49:29.310+0000] {subprocess.py:93} INFO - Processing sensor 590/632 (sensor_id=12235613)
+[2025-12-16T23:49:29.311+0000] {subprocess.py:93} INFO -   Sensor 12235613: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.312+0000] {subprocess.py:93} INFO -   Sensor 12235613: fetched page 2 with 64 hourly records.
+[2025-12-16T23:49:29.312+0000] {subprocess.py:93} INFO - Processing sensor 591/632 (sensor_id=14340865)
+[2025-12-16T23:49:29.313+0000] {subprocess.py:93} INFO -   Sensor 14340865: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.313+0000] {subprocess.py:93} INFO -   Sensor 14340865: fetched page 2 with 64 hourly records.
+[2025-12-16T23:49:29.314+0000] {subprocess.py:93} INFO - Processing sensor 592/632 (sensor_id=14340866)
+[2025-12-16T23:49:29.314+0000] {subprocess.py:93} INFO -   Sensor 14340866: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.315+0000] {subprocess.py:93} INFO -   Sensor 14340866: fetched page 2 with 64 hourly records.
+[2025-12-16T23:49:29.315+0000] {subprocess.py:93} INFO - Processing sensor 593/632 (sensor_id=386)
+[2025-12-16T23:49:29.316+0000] {subprocess.py:93} INFO - Processing sensor 594/632 (sensor_id=389)
+[2025-12-16T23:49:29.316+0000] {subprocess.py:93} INFO - Processing sensor 595/632 (sensor_id=390)
+[2025-12-16T23:49:29.316+0000] {subprocess.py:93} INFO - Processing sensor 596/632 (sensor_id=391)
+[2025-12-16T23:49:29.317+0000] {subprocess.py:93} INFO - Rate limited for sensor 391, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:49:29.317+0000] {subprocess.py:93} INFO - Rate limited for sensor 391, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:49:29.317+0000] {subprocess.py:93} INFO - Processing sensor 597/632 (sensor_id=388)
+[2025-12-16T23:49:29.318+0000] {subprocess.py:93} INFO - Processing sensor 598/632 (sensor_id=387)
+[2025-12-16T23:49:29.318+0000] {subprocess.py:93} INFO - Processing sensor 599/632 (sensor_id=401)
+[2025-12-16T23:49:29.319+0000] {subprocess.py:93} INFO - Processing sensor 600/632 (sensor_id=402)
+[2025-12-16T23:49:29.319+0000] {subprocess.py:93} INFO - Processing sensor 601/632 (sensor_id=1084)
+[2025-12-16T23:49:29.319+0000] {subprocess.py:93} INFO -   Sensor 1084: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.319+0000] {subprocess.py:93} INFO -   Sensor 1084: fetched page 2 with 60 hourly records.
+[2025-12-16T23:49:29.320+0000] {subprocess.py:93} INFO - Processing sensor 602/632 (sensor_id=1085)
+[2025-12-16T23:49:29.320+0000] {subprocess.py:93} INFO -   Sensor 1085: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.320+0000] {subprocess.py:93} INFO -   Sensor 1085: fetched page 2 with 67 hourly records.
+[2025-12-16T23:49:29.321+0000] {subprocess.py:93} INFO - Processing sensor 603/632 (sensor_id=1061)
+[2025-12-16T23:49:29.321+0000] {subprocess.py:93} INFO -   Sensor 1061: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.321+0000] {subprocess.py:93} INFO -   Sensor 1061: fetched page 2 with 67 hourly records.
+[2025-12-16T23:49:29.321+0000] {subprocess.py:93} INFO - Processing sensor 604/632 (sensor_id=403)
+[2025-12-16T23:49:29.322+0000] {subprocess.py:93} INFO - Processing sensor 605/632 (sensor_id=5077787)
+[2025-12-16T23:49:29.322+0000] {subprocess.py:93} INFO -   Sensor 5077787: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.322+0000] {subprocess.py:93} INFO -   Sensor 5077787: fetched page 2 with 67 hourly records.
+[2025-12-16T23:49:29.323+0000] {subprocess.py:93} INFO - Processing sensor 606/632 (sensor_id=5077675)
+[2025-12-16T23:49:29.323+0000] {subprocess.py:93} INFO -   Sensor 5077675: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.323+0000] {subprocess.py:93} INFO -   Sensor 5077675: fetched page 2 with 67 hourly records.
+[2025-12-16T23:49:29.324+0000] {subprocess.py:93} INFO - Processing sensor 607/632 (sensor_id=405)
+[2025-12-16T23:49:29.324+0000] {subprocess.py:93} INFO - Processing sensor 608/632 (sensor_id=406)
+[2025-12-16T23:49:29.325+0000] {subprocess.py:93} INFO - Processing sensor 609/632 (sensor_id=407)
+[2025-12-16T23:49:29.325+0000] {subprocess.py:93} INFO - Processing sensor 610/632 (sensor_id=4089)
+[2025-12-16T23:49:29.326+0000] {subprocess.py:93} INFO -   Sensor 4089: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.326+0000] {subprocess.py:93} INFO -   Sensor 4089: fetched page 2 with 64 hourly records.
+[2025-12-16T23:49:29.326+0000] {subprocess.py:93} INFO - Processing sensor 611/632 (sensor_id=4091)
+[2025-12-16T23:49:29.327+0000] {subprocess.py:93} INFO -   Sensor 4091: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.327+0000] {subprocess.py:93} INFO -   Sensor 4091: fetched page 2 with 67 hourly records.
+[2025-12-16T23:49:29.327+0000] {subprocess.py:93} INFO - Processing sensor 612/632 (sensor_id=4090)
+[2025-12-16T23:49:29.327+0000] {subprocess.py:93} INFO - Rate limited for sensor 4090, attempt 1/3. Sleeping 5s...
+[2025-12-16T23:49:29.328+0000] {subprocess.py:93} INFO - Rate limited for sensor 4090, attempt 2/3. Sleeping 10s...
+[2025-12-16T23:49:29.328+0000] {subprocess.py:93} INFO - Rate limited for sensor 4090, attempt 3/3. Sleeping 15s...
+[2025-12-16T23:49:29.328+0000] {subprocess.py:93} INFO - Processing sensor 613/632 (sensor_id=408)
+[2025-12-16T23:49:29.328+0000] {subprocess.py:93} INFO - Processing sensor 614/632 (sensor_id=409)
+[2025-12-16T23:49:29.328+0000] {subprocess.py:93} INFO - Processing sensor 615/632 (sensor_id=411)
+[2025-12-16T23:49:29.329+0000] {subprocess.py:93} INFO - Processing sensor 616/632 (sensor_id=410)
+[2025-12-16T23:49:29.329+0000] {subprocess.py:93} INFO -   Sensor 410: fetched page 1 with 100 hourly records.
+[2025-12-16T23:49:29.329+0000] {subprocess.py:93} INFO -   Sensor 410: fetched page 2 with 65 hourly records.
+[2025-12-16T23:49:29.329+0000] {subprocess.py:93} INFO - Processing sensor 617/632 (sensor_id=412)
+[2025-12-16T23:49:29.330+0000] {subprocess.py:93} INFO - Processing sensor 618/632 (sensor_id=415)
+[2025-12-16T23:49:29.330+0000] {subprocess.py:93} INFO - Processing sensor 619/632 (sensor_id=424)
+[2025-12-16T23:49:29.330+0000] {subprocess.py:93} INFO - Processing sensor 620/632 (sensor_id=413)
+[2025-12-16T23:49:29.330+0000] {subprocess.py:93} INFO - Processing sensor 621/632 (sensor_id=414)
+[2025-12-16T23:49:29.330+0000] {subprocess.py:93} INFO - Processing sensor 622/632 (sensor_id=417)
+[2025-12-16T23:49:29.331+0000] {subprocess.py:93} INFO - Processing sensor 623/632 (sensor_id=418)
+[2025-12-16T23:49:29.331+0000] {subprocess.py:93} INFO - Processing sensor 624/632 (sensor_id=416)
+[2025-12-16T23:49:29.331+0000] {subprocess.py:93} INFO - Processing sensor 625/632 (sensor_id=419)
+[2025-12-16T23:49:29.331+0000] {subprocess.py:93} INFO - Processing sensor 626/632 (sensor_id=422)
+[2025-12-16T23:49:29.331+0000] {subprocess.py:93} INFO - Processing sensor 627/632 (sensor_id=421)
+[2025-12-16T23:49:29.332+0000] {subprocess.py:93} INFO - Processing sensor 628/632 (sensor_id=420)
+[2025-12-16T23:49:29.332+0000] {subprocess.py:93} INFO - Processing sensor 629/632 (sensor_id=423)
+[2025-12-16T23:49:29.332+0000] {subprocess.py:93} INFO - Processing sensor 630/632 (sensor_id=425)
+[2025-12-16T23:49:29.332+0000] {subprocess.py:93} INFO - Processing sensor 631/632 (sensor_id=426)
+[2025-12-16T23:49:29.332+0000] {subprocess.py:93} INFO - Processing sensor 632/632 (sensor_id=427)
+[2025-12-16T23:49:29.333+0000] {subprocess.py:93} INFO - Total hourly measurement rows collected: 40035
+[2025-12-16T23:49:29.333+0000] {subprocess.py:93} INFO - Loading 40035 rows into openaq-elt-pipeline.openaq_raw.measurements_hours ...
+[2025-12-16T23:49:29.333+0000] {subprocess.py:93} INFO - BigQuery load job completed.
+[2025-12-16T23:49:29.333+0000] {subprocess.py:93} INFO - Table openaq-elt-pipeline.openaq_raw.measurements_hours now has 40035 rows.
+[2025-12-16T23:49:29.441+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-16T23:49:29.443+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-16T23:49:29.464+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=openaq_elt_pipeline, task_id=ingest_measurements, run_id=manual__2025-12-16T23:06:31.363784+00:00, execution_date=20251216T230631, start_date=20251216T231236, end_date=20251216T234929
+[2025-12-16T23:49:29.515+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-12-16T23:49:29.539+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-16T23:49:29.540+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

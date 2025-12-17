@@ -1,0 +1,47 @@
+[2025-12-16T23:04:48.028+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-16T23:04:48.056+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-16T22:58:40.329145+00:00 [queued]>
+[2025-12-16T23:04:48.061+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-16T22:58:40.329145+00:00 [queued]>
+[2025-12-16T23:04:48.061+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-16T23:04:48.066+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): ingest_measurements> on 2025-12-16 22:58:40.329145+00:00
+[2025-12-16T23:04:48.070+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=492) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-16T23:04:48.071+0000] {standard_task_runner.py:64} INFO - Started process 493 to run task
+[2025-12-16T23:04:48.070+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'openaq_elt_pipeline', 'ingest_measurements', 'manual__2025-12-16T22:58:40.329145+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/openaq_elt_dag.py', '--cfg-path', '/tmp/tmp70w8ozzy']
+[2025-12-16T23:04:48.072+0000] {standard_task_runner.py:91} INFO - Job 26: Subtask ingest_measurements
+[2025-12-16T23:04:48.100+0000] {task_command.py:426} INFO - Running <TaskInstance: openaq_elt_pipeline.ingest_measurements manual__2025-12-16T22:58:40.329145+00:00 [running]> on host 2412a916846f
+[2025-12-16T23:04:48.142+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='openaq_elt_pipeline' AIRFLOW_CTX_TASK_ID='ingest_measurements' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T22:58:40.329145+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-16T22:58:40.329145+00:00'
+[2025-12-16T23:04:48.143+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-16T23:04:48.151+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-16T23:04:48.152+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/project/ingest &&\n        python ingest_measurements.py\n        ']
+[2025-12-16T23:04:48.156+0000] {subprocess.py:86} INFO - Output:
+[2025-12-16T23:05:58.362+0000] {local_task_job_runner.py:124} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-12-16T23:05:58.421+0000] {process_utils.py:132} INFO - Sending 15 to group 493. PIDs of all processes in the group: [494, 495, 493]
+[2025-12-16T23:05:58.453+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 493
+[2025-12-16T23:05:58.468+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-12-16T23:05:58.479+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-12-16T23:05:58.481+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-16T23:05:58.505+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=495, status='terminated', started='23:04:47') (495) terminated with exit code None
+[2025-12-16T23:05:58.523+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 234, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2613, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-12-16T23:05:58.536+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=openaq_elt_pipeline, task_id=ingest_measurements, run_id=manual__2025-12-16T22:58:40.329145+00:00, execution_date=20251216T225840, start_date=20251216T230448, end_date=20251216T230558
+[2025-12-16T23:05:58.608+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=493, status='terminated', exitcode=2, started='23:04:47') (493) terminated with exit code 2
+[2025-12-16T23:05:58.613+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=494, status='terminated', started='23:04:47') (494) terminated with exit code None
+[2025-12-16T23:05:58.614+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 143
+[2025-12-16T23:05:58.676+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-16T23:05:58.711+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
